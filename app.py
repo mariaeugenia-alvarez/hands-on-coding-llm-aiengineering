@@ -11,7 +11,8 @@ app = Flask(__name__)
 def webhook():
     """Recibe mensajes de Telegram"""
     update = request.get_json()
-    return handle_webhook(update)
+    handle_webhook(update)
+    return json.dumps({"status": "ok"})
 
 
 @app.route("/health", methods=["GET"])

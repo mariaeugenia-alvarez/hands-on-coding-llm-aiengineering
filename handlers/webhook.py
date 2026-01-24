@@ -13,5 +13,3 @@ def handle_webhook(update):
         # Responder al mensaje
         response = f"Recibí: {text}"
         send_message(chat_id, response)
-
-    return json.dumps({"status": "ok"})
