@@ -51,4 +51,4 @@ curl -X POST https://api.telegram.org/bot<TOKEN>/setWebhook \
 
 ## ✏️ Personalizar
 
-Edita `handlers/webhook.py` función `handle_webhook()` para cambiar las respuestas.
+Edita `handlers/webhook.py` función `handle_message()` para cambiar las respuestas.

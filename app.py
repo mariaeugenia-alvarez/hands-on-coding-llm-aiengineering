@@ -2,7 +2,7 @@
 
 import json
 from flask import Flask, request
-from handlers.webhook import handle_webhook
+from handlers.message import handle_message
 
 app = Flask(__name__)
 
@@ -11,7 +11,7 @@ app = Flask(__name__)
 def webhook():
     """Recibe mensajes de Telegram"""
     update = request.get_json()
-    handle_webhook(update)
+    handle_message(update)
     return json.dumps({"status": "ok"})
 
 
