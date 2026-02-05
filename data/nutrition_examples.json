@@ -1,0 +1,511 @@
+{
+  "ejemplos": [
+    {
+      "user_input": "Hago crossfit 4 veces a la semana, peso 75kg, quiero perder grasa",
+      "contexto_usuario": {
+        "peso": 75,
+        "altura": 175,
+        "edad": 28,
+        "sexo": "M",
+        "objetivo": "perder_grasa",
+        "deporte": "crossfit",
+        "frecuencia": 4
+      },
+      "respuesta_ideal": "Perfecto, vamos a estructurar tu plan:\n\nMACROS DIARIOS\n- Proteína: 165g (2.2g/kg) - Preserva músculo\n- Carbohidratos: 190g - Rendimiento con déficit moderado\n- Grasas: 55g - Hormonas y saciedad\n- TOTAL: ~2050 kcal (déficit 15%)\n\nDISTRIBUCIÓN\nDías de CrossFit: más carbos pre-entreno\nDescanso: menos carbos, más fibra\n\nEJEMPLO MENÚ DÍA CROSSFIT\nDesayuno: avena + yogur griego\nComida: pollo + arroz integral + brócoli\nCena: salmón + ensalada mixta"
+    },
+    {
+      "user_input": "Corro 5 días por semana, 60kg, objetivo rendimiento en 10k",
+      "contexto_usuario": {
+        "peso": 60,
+        "altura": 168,
+        "edad": 24,
+        "sexo": "F",
+        "objetivo": "rendimiento",
+        "deporte": "running",
+        "frecuencia": 5
+      },
+      "respuesta_ideal": "Plan enfocado a rendimiento en 10k:\n\nMACROS DIARIOS\n- Proteína: 90g (1.5g/kg)\n- Carbohidratos: 300g - Carga adecuada para volumen\n- Grasas: 60g\n- TOTAL: ~2460 kcal\n\nTIMING\nPre: 2h antes arroz/banano\nPost: proteína + fruta\n\nEJEMPLO\nComida: pollo + pasta integral + verduras"
+    },
+    {
+      "user_input": "Gimnasio 3 veces/semana, 82kg, ganar músculo",
+      "contexto_usuario": {
+        "peso": 82,
+        "altura": 180,
+        "edad": 31,
+        "sexo": "M",
+        "objetivo": "ganar_musculo",
+        "deporte": "gym",
+        "frecuencia": 3
+      },
+      "respuesta_ideal": "Hipertrofia con superávit leve:\n\nMACROS DIARIOS\n- Proteína: 180g (2.2g/kg)\n- Carbohidratos: 280g\n- Grasas: 80g\n- TOTAL: ~2880 kcal (+10%)\n\nEJECUCIÓN\nRepartir proteína en 4-5 tomas\nCarbos más altos post-entreno\n\nMENÚ\nArroz + ternera magra + ensalada"
+    },
+    {
+      "user_input": "Triatlón amateur, 70kg, 6 sesiones/semana, mantener peso",
+      "contexto_usuario": {
+        "peso": 70,
+        "altura": 176,
+        "edad": 29,
+        "sexo": "M",
+        "objetivo": "mantenimiento",
+        "deporte": "triathlon",
+        "frecuencia": 6
+      },
+      "respuesta_ideal": "Endurance con mantenimiento:\n\nMACROS DIARIOS\n- Proteína: 105g (1.5g/kg)\n- Carbohidratos: 380g\n- Grasas: 75g\n- TOTAL: ~3075 kcal\n\nTIMING\nMayor consumo de carbos en sesiones dobles\n\nMENÚ\nQuinoa + salmón + batata + verduras"
+    },
+    {
+      "user_input": "Natación 4 veces/semana, 65kg, recomposición corporal",
+      "contexto_usuario": {
+        "peso": 65,
+        "altura": 170,
+        "edad": 26,
+        "sexo": "F",
+        "objetivo": "recomposicion",
+        "deporte": "swimming",
+        "frecuencia": 4
+      },
+      "respuesta_ideal": "Recomposición con equilibrio energético:\n\nMACROS DIARIOS\n- Proteína: 130g (2.0g/kg)\n- Carbohidratos: 220g\n- Grasas: 65g\n- TOTAL: ~2295 kcal\n\nFOCO\nAlta proteína, carbos moderados\n\nMENÚ\nTofu + arroz integral + brócoli"
+    },
+    {
+      "user_input": "Boxeo 3 veces/semana, 78kg, bajar 3kg en 8 semanas",
+      "contexto_usuario": {
+        "peso": 78,
+        "altura": 177,
+        "edad": 30,
+        "sexo": "M",
+        "objetivo": "perder_grasa",
+        "deporte": "boxing",
+        "frecuencia": 3
+      },
+      "respuesta_ideal": "Déficit moderado con desempeño:\n\nMACROS DIARIOS\n- Proteína: 170g (2.2g/kg)\n- Carbohidratos: 210g\n- Grasas: 60g\n- TOTAL: ~2430 kcal (−15%)\n\nTIMING\nPre: 2h carbos complejos\nPost: proteína rápida + fruta"
+    },
+    {
+      "user_input": "Ciclismo 5 veces/semana, 72kg, mejorar FTP",
+      "contexto_usuario": {
+        "peso": 72,
+        "altura": 178,
+        "edad": 34,
+        "sexo": "M",
+        "objetivo": "rendimiento",
+        "deporte": "cycling",
+        "frecuencia": 5
+      },
+      "respuesta_ideal": "Endurance con alta disponibilidad de carbos:\n\nMACROS DIARIOS\n- Proteína: 100g (1.4g/kg)\n- Carbohidratos: 420g\n- Grasas: 70g\n- TOTAL: ~3340 kcal\n\nCarbos intra en sesiones >90min"
+    },
+    {
+      "user_input": "Levantamiento olímpico 4x/semana, 85kg, fuerza máxima",
+      "contexto_usuario": {
+        "peso": 85,
+        "altura": 182,
+        "edad": 27,
+        "sexo": "M",
+        "objetivo": "ganar_musculo",
+        "deporte": "weightlifting",
+        "frecuencia": 4
+      },
+      "respuesta_ideal": "Fuerza con superávit leve:\n\nMACROS DIARIOS\n- Proteína: 190g (2.2g/kg)\n- Carbohidratos: 300g\n- Grasas: 90g\n- TOTAL: ~3110 kcal\n\nMás carbos en días de cargas pesadas"
+    },
+    {
+      "user_input": "Fútbol 3x/semana, 68kg, recuperar mejor",
+      "contexto_usuario": {
+        "peso": 68,
+        "altura": 172,
+        "edad": 22,
+        "sexo": "M",
+        "objetivo": "mantenimiento",
+        "deporte": "soccer",
+        "frecuencia": 3
+      },
+      "respuesta_ideal": "Intermitente con enfoque recuperación:\n\nMACROS DIARIOS\n- Proteína: 115g (1.7g/kg)\n- Carbohidratos: 260g\n- Grasas: 70g\n- TOTAL: ~2585 kcal\n\nPost: carbo + proteína dentro de 60min"
+    },
+    {
+      "user_input": "Yoga diario (6x), 58kg, mejorar bienestar, mantener peso",
+      "contexto_usuario": {
+        "peso": 58,
+        "altura": 165,
+        "edad": 33,
+        "sexo": "F",
+        "objetivo": "mantenimiento",
+        "deporte": "yoga",
+        "frecuencia": 6
+      },
+      "respuesta_ideal": "Bienestar y saciedad sin déficit/superávit:\n\nMACROS DIARIOS\n- Proteína: 75g (1.3g/kg)\n- Carbohidratos: 180g\n- Grasas: 60g\n- TOTAL: ~2010 kcal\n\nPriorizar fibra y micronutrientes"
+    },
+    {
+      "user_input": "Escalada 2x/semana, 70kg, recomposición y agarre",
+      "contexto_usuario": {
+        "peso": 70,
+        "altura": 176,
+        "edad": 35,
+        "sexo": "M",
+        "objetivo": "recomposicion",
+        "deporte": "climbing",
+        "frecuencia": 2
+      },
+      "respuesta_ideal": "Fuerza-resistencia con control de grasa:\n\nMACROS DIARIOS\n- Proteína: 140g (2.0g/kg)\n- Carbohidratos: 220g\n- Grasas: 65g\n- TOTAL: ~2345 kcal\n\nMás carbos en días de boulder"
+    },
+    {
+      "user_input": "Remo 4x/semana, 80kg, mejorar VO2",
+      "contexto_usuario": {
+        "peso": 80,
+        "altura": 183,
+        "edad": 28,
+        "sexo": "M",
+        "objetivo": "rendimiento",
+        "deporte": "rowing",
+        "frecuencia": 4
+      },
+      "respuesta_ideal": "Endurance con alto volumen:\n\nMACROS DIARIOS\n- Proteína: 120g (1.5g/kg)\n- Carbohidratos: 360g\n- Grasas: 80g\n- TOTAL: ~3080 kcal\n\nCarbos intra en series largas"
+    },
+    {
+      "user_input": "Pilates 3x, 55kg, perder grasa suavemente",
+      "contexto_usuario": {
+        "peso": 55,
+        "altura": 162,
+        "edad": 40,
+        "sexo": "F",
+        "objetivo": "perder_grasa",
+        "deporte": "pilates",
+        "frecuencia": 3
+      },
+      "respuesta_ideal": "Déficit leve con saciedad alta:\n\nMACROS DIARIOS\n- Proteína: 100g (1.8g/kg)\n- Carbohidratos: 150g\n- Grasas: 55g\n- TOTAL: ~1755 kcal (−10%)\n\nFibra alta, azúcares bajos"
+    },
+    {
+      "user_input": "Baloncesto 4x, 74kg, rendimiento en ligas locales",
+      "contexto_usuario": {
+        "peso": 74,
+        "altura": 179,
+        "edad": 25,
+        "sexo": "M",
+        "objetivo": "rendimiento",
+        "deporte": "basketball",
+        "frecuencia": 4
+      },
+      "respuesta_ideal": "Intermitente con sprints y saltos:\n\nMACROS DIARIOS\n- Proteína: 120g (1.6g/kg)\n- Carbohidratos: 320g\n- Grasas: 70g\n- TOTAL: ~2820 kcal\n\nHidratación y sodio en partidos"
+    },
+    {
+      "user_input": "Tenis 3x/semana, 64kg, mantenimiento",
+      "contexto_usuario": {
+        "peso": 64,
+        "altura": 170,
+        "edad": 29,
+        "sexo": "F",
+        "objetivo": "mantenimiento",
+        "deporte": "tennis",
+        "frecuencia": 3
+      },
+      "respuesta_ideal": "Intermitente con técnica y fondo:\n\nMACROS DIARIOS\n- Proteína: 95g (1.5g/kg)\n- Carbohidratos: 240g\n- Grasas: 60g\n- TOTAL: ~2215 kcal\n\nPre: fruta + pan integral"
+    },
+    {
+      "user_input": "Danza 5x/semana, 59kg, bajar 2kg manteniendo energía",
+      "contexto_usuario": {
+        "peso": 59,
+        "altura": 168,
+        "edad": 23,
+        "sexo": "F",
+        "objetivo": "perder_grasa",
+        "deporte": "dance",
+        "frecuencia": 5
+      },
+      "respuesta_ideal": "Cardio con déficit ligero:\n\nMACROS DIARIOS\n- Proteína: 115g (1.95g/kg)\n- Carbohidratos: 210g\n- Grasas: 55g\n- TOTAL: ~2175 kcal (−12%)\n\nAjustar carbos según ensayo"
+    },
+    {
+      "user_input": "Badminton 2x, 70kg, recomposición y agilidad",
+      "contexto_usuario": {
+        "peso": 70,
+        "altura": 174,
+        "edad": 32,
+        "sexo": "M",
+        "objetivo": "recomposicion",
+        "deporte": "badminton",
+        "frecuencia": 2
+      },
+      "respuesta_ideal": "Intermitente ligero:\n\nMACROS DIARIOS\n- Proteína: 140g (2.0g/kg)\n- Carbohidratos: 200g\n- Grasas: 65g\n- TOTAL: ~2335 kcal\n\nMás carbos en partidos"
+    },
+    {
+      "user_input": "Artes marciales 4x, 76kg, competir a 73kg",
+      "contexto_usuario": {
+        "peso": 76,
+        "altura": 178,
+        "edad": 27,
+        "sexo": "M",
+        "objetivo": "perder_grasa",
+        "deporte": "martial_arts",
+        "frecuencia": 4
+      },
+      "respuesta_ideal": "Intervalos de alta demanda:\n\nMACROS DIARIOS\n- Proteína: 170g (2.2g/kg)\n- Carbohidratos: 220g\n- Grasas: 60g\n- TOTAL: ~2470 kcal (−15%)\n\nElectrolitos en sesiones largas"
+    },
+    {
+      "user_input": "Senderismo 3x, 66kg, ganar algo de músculo",
+      "contexto_usuario": {
+        "peso": 66,
+        "altura": 171,
+        "edad": 36,
+        "sexo": "F",
+        "objetivo": "ganar_musculo",
+        "deporte": "hiking",
+        "frecuencia": 3
+      },
+      "respuesta_ideal": "Resistencia con fuerza complementaria:\n\nMACROS DIARIOS\n- Proteína: 120g (1.8g/kg)\n- Carbohidratos: 240g\n- Grasas: 70g\n- TOTAL: ~2380 kcal (+5%)\n\nAñadir entrenamiento de fuerza 2x"
+    },
+    {
+      "user_input": "Crossfit 5x, 82kg, mantener rendimiento y peso",
+      "contexto_usuario": {
+        "peso": 82,
+        "altura": 180,
+        "edad": 29,
+        "sexo": "M",
+        "objetivo": "mantenimiento",
+        "deporte": "crossfit",
+        "frecuencia": 5
+      },
+      "respuesta_ideal": "Alta intensidad con mantenimiento:\n\nMACROS DIARIOS\n- Proteína: 165g (2.0g/kg)\n- Carbohidratos: 320g\n- Grasas: 80g\n- TOTAL: ~2920 kcal\n\nCarbos pre y post WOD"
+    },
+    {
+      "user_input": "Gimnasio 5x, 70kg, definir sin perder fuerza",
+      "contexto_usuario": {
+        "peso": 70,
+        "altura": 178,
+        "edad": 33,
+        "sexo": "M",
+        "objetivo": "perder_grasa",
+        "deporte": "gym",
+        "frecuencia": 5
+      },
+      "respuesta_ideal": "Fuerza con déficit controlado:\n\nMACROS DIARIOS\n- Proteína: 160g (2.3g/kg)\n- Carbohidratos: 200g\n- Grasas: 60g\n- TOTAL: ~2360 kcal (−12%)\n\nMás verdura, menos azúcar"
+    },
+    {
+      "user_input": "Correr 3x, 90kg, perder 8kg en 16 semanas",
+      "contexto_usuario": {
+        "peso": 90,
+        "altura": 185,
+        "edad": 41,
+        "sexo": "M",
+        "objetivo": "perder_grasa",
+        "deporte": "running",
+        "frecuencia": 3
+      },
+      "respuesta_ideal": "Endurance con déficit sostenido:\n\nMACROS DIARIOS\n- Proteína: 200g (2.2g/kg)\n- Carbohidratos: 220g\n- Grasas: 70g\n- TOTAL: ~2620 kcal (−20%)\n\nCaminar adicional y sueño óptimo"
+    },
+    {
+      "user_input": "Natación 2x, 50kg, ganar músculo",
+      "contexto_usuario": {
+        "peso": 50,
+        "altura": 160,
+        "edad": 21,
+        "sexo": "F",
+        "objetivo": "ganar_musculo",
+        "deporte": "swimming",
+        "frecuencia": 2
+      },
+      "respuesta_ideal": "Volumen moderado + fuerza:\n\nMACROS DIARIOS\n- Proteína: 110g (2.2g/kg)\n- Carbohidratos: 220g\n- Grasas: 70g\n- TOTAL: ~2210 kcal (+10%)\n\n2-3 comidas grandes/día"
+    },
+    {
+      "user_input": "Ciclismo 2x, 85kg, mantenimiento con energía estable",
+      "contexto_usuario": {
+        "peso": 85,
+        "altura": 186,
+        "edad": 38,
+        "sexo": "M",
+        "objetivo": "mantenimiento",
+        "deporte": "cycling",
+        "frecuencia": 2
+      },
+      "respuesta_ideal": "Endurance ligera:\n\nMACROS DIARIOS\n- Proteína: 130g (1.5g/kg)\n- Carbohidratos: 260g\n- Grasas: 85g\n- TOTAL: ~2695 kcal\n\nCarbos antes de rutas largas"
+    },
+    {
+      "user_input": "Levantamiento 6x, 95kg, masa muscular",
+      "contexto_usuario": {
+        "peso": 95,
+        "altura": 188,
+        "edad": 30,
+        "sexo": "M",
+        "objetivo": "ganar_musculo",
+        "deporte": "weightlifting",
+        "frecuencia": 6
+      },
+      "respuesta_ideal": "Alto volumen de fuerza:\n\nMACROS DIARIOS\n- Proteína: 210g (2.2g/kg)\n- Carbohidratos: 380g\n- Grasas: 95g\n- TOTAL: ~3515 kcal (+10%)\n\nCarbos post + creatina"
+    },
+    {
+      "user_input": "Baloncesto 2x, 80kg, recomposición",
+      "contexto_usuario": {
+        "peso": 80,
+        "altura": 182,
+        "edad": 35,
+        "sexo": "M",
+        "objetivo": "recomposicion",
+        "deporte": "basketball",
+        "frecuencia": 2
+      },
+      "respuesta_ideal": "Intermitente moderado:\n\nMACROS DIARIOS\n- Proteína: 160g (2.0g/kg)\n- Carbohidratos: 240g\n- Grasas: 75g\n- TOTAL: ~2635 kcal\n\nFibra y volumen alimentario altos"
+    },
+    {
+      "user_input": "Gimnasio 4x, 60kg, mantener y tonificar",
+      "contexto_usuario": {
+        "peso": 60,
+        "altura": 165,
+        "edad": 28,
+        "sexo": "F",
+        "objetivo": "mantenimiento",
+        "deporte": "gym",
+        "frecuencia": 4
+      },
+      "respuesta_ideal": "Fuerza + cardio suave:\n\nMACROS DIARIOS\n- Proteína: 96g (1.6g/kg)\n- Carbohidratos: 210g\n- Grasas: 60g\n- TOTAL: ~2144 kcal\n\nHidratación y sueño óptimo"
+    },
+    {
+      "user_input": "Tenis 4x, 72kg, perder grasa 4kg",
+      "contexto_usuario": {
+        "peso": 72,
+        "altura": 176,
+        "edad": 37,
+        "sexo": "M",
+        "objetivo": "perder_grasa",
+        "deporte": "tennis",
+        "frecuencia": 4
+      },
+      "respuesta_ideal": "Intermitente con déficit:\n\nMACROS DIARIOS\n- Proteína: 158g (2.2g/kg)\n- Carbohidratos: 220g\n- Grasas: 65g\n- TOTAL: ~2497 kcal (−15%)\n\nPre: fruta + tostadas"
+    },
+    {
+      "user_input": "Fútbol 5x, 75kg, ganar músculo funcional",
+      "contexto_usuario": {
+        "peso": 75,
+        "altura": 178,
+        "edad": 24,
+        "sexo": "M",
+        "objetivo": "ganar_musculo",
+        "deporte": "soccer",
+        "frecuencia": 5
+      },
+      "respuesta_ideal": "Intermitente con fuerza complementaria:\n\nMACROS DIARIOS\n- Proteína: 165g (2.2g/kg)\n- Carbohidratos: 340g\n- Grasas: 80g\n- TOTAL: ~3110 kcal (+8%)\n\nPost-partido: carbo alto + proteína"
+    },
+    {
+      "user_input": "Remo 2x, 68kg, perder grasa leve",
+      "contexto_usuario": {
+        "peso": 68,
+        "altura": 172,
+        "edad": 42,
+        "sexo": "F",
+        "objetivo": "perder_grasa",
+        "deporte": "rowing",
+        "frecuencia": 2
+      },
+      "respuesta_ideal": "Endurance moderado:\n\nMACROS DIARIOS\n- Proteína: 130g (1.9g/kg)\n- Carbohidratos: 190g\n- Grasas: 60g\n- TOTAL: ~2090 kcal (−12%)\n\nMás verdura y proteína magra"
+    },
+    {
+      "user_input": "Pilates 5x, 62kg, mantener y mejorar composición",
+      "contexto_usuario": {
+        "peso": 62,
+        "altura": 167,
+        "edad": 31,
+        "sexo": "F",
+        "objetivo": "mantenimiento",
+        "deporte": "pilates",
+        "frecuencia": 5
+      },
+      "respuesta_ideal": "Flexibilidad + fuerza ligera:\n\nMACROS DIARIOS\n- Proteína: 93g (1.5g/kg)\n- Carbohidratos: 200g\n- Grasas: 62g\n- TOTAL: ~2130 kcal\n\nGrasas saludables y fibra"
+    },
+    {
+      "user_input": "Boxeo 5x, 70kg, rendimiento y corte leve",
+      "contexto_usuario": {
+        "peso": 70,
+        "altura": 176,
+        "edad": 26,
+        "sexo": "M",
+        "objetivo": "rendimiento",
+        "deporte": "boxing",
+        "frecuencia": 5
+      },
+      "respuesta_ideal": "HIIT con demanda glucolítica:\n\nMACROS DIARIOS\n- Proteína: 140g (2.0g/kg)\n- Carbohidratos: 320g\n- Grasas: 70g\n- TOTAL: ~2820 kcal\n\nPre: arroz; Post: fruta + proteína"
+    },
+    {
+      "user_input": "Danza 3x, 65kg, ganar músculo leve",
+      "contexto_usuario": {
+        "peso": 65,
+        "altura": 170,
+        "edad": 27,
+        "sexo": "F",
+        "objetivo": "ganar_musculo",
+        "deporte": "dance",
+        "frecuencia": 3
+      },
+      "respuesta_ideal": "Cardio + fuerza complementar:\n\nMACROS DIARIOS\n- Proteína: 130g (2.0g/kg)\n- Carbohidratos: 240g\n- Grasas: 70g\n- TOTAL: ~2380 kcal (+7%)\n\nPriorizar proteína en cada comida"
+    },
+    {
+      "user_input": "Badminton 4x, 62kg, rendimiento y agilidad",
+      "contexto_usuario": {
+        "peso": 62,
+        "altura": 168,
+        "edad": 20,
+        "sexo": "F",
+        "objetivo": "rendimiento",
+        "deporte": "badminton",
+        "frecuencia": 4
+      },
+      "respuesta_ideal": "Intermitente con técnica:\n\nMACROS DIARIOS\n- Proteína: 95g (1.5g/kg)\n- Carbohidratos: 270g\n- Grasas: 60g\n- TOTAL: ~2325 kcal\n\nPre: fruta; intra: agua + sodio"
+    },
+    {
+      "user_input": "Senderismo 1x largo/semana, 78kg, perder grasa",
+      "contexto_usuario": {
+        "peso": 78,
+        "altura": 180,
+        "edad": 39,
+        "sexo": "M",
+        "objetivo": "perder_grasa",
+        "deporte": "hiking",
+        "frecuencia": 1
+      },
+      "respuesta_ideal": "Resistencia baja con déficit:\n\nMACROS DIARIOS\n- Proteína: 155g (2.0g/kg)\n- Carbohidratos: 200g\n- Grasas: 65g\n- TOTAL: ~2415 kcal (−15%)\n\nSnacks altos en proteína"
+    },
+    {
+      "user_input": "Crossfit 2x, 68kg, recomposición",
+      "contexto_usuario": {
+        "peso": 68,
+        "altura": 172,
+        "edad": 28,
+        "sexo": "F",
+        "objetivo": "recomposicion",
+        "deporte": "crossfit",
+        "frecuencia": 2
+      },
+      "respuesta_ideal": "Alta intensidad moderada:\n\nMACROS DIARIOS\n- Proteína: 140g (2.05g/kg)\n- Carbohidratos: 220g\n- Grasas: 60g\n- TOTAL: ~2320 kcal\n\nMás carbos pre WOD"
+    },
+    {
+      "user_input": "Tenis 2x, 75kg, mantener, mejorar recuperación",
+      "contexto_usuario": {
+        "peso": 75,
+        "altura": 180,
+        "edad": 44,
+        "sexo": "M",
+        "objetivo": "mantenimiento",
+        "deporte": "tennis",
+        "frecuencia": 2
+      },
+      "respuesta_ideal": "Intermitente recreativo:\n\nMACROS DIARIOS\n- Proteína: 115g (1.55g/kg)\n- Carbohidratos: 240g\n- Grasas: 75g\n- TOTAL: ~2485 kcal\n\nPost: batido de proteína + fruta"
+    },
+    {
+      "user_input": "Gimnasio 2x, 90kg, recomposición, mejorar salud metabólica",
+      "contexto_usuario": {
+        "peso": 90,
+        "altura": 183,
+        "edad": 45,
+        "sexo": "M",
+        "objetivo": "recomposicion",
+        "deporte": "gym",
+        "frecuencia": 2
+      },
+      "respuesta_ideal": "Fuerza + déficit suave:\n\nMACROS DIARIOS\n- Proteína: 180g (2.0g/kg)\n- Carbohidratos: 220g\n- Grasas: 70g\n- TOTAL: ~2660 kcal (−12%)\n\nMás fibra y pasos diarios"
+    },
+    {
+      "user_input": "Correr 6x, 58kg, sub 45' 10k",
+      "contexto_usuario": {
+        "peso": 58,
+        "altura": 164,
+        "edad": 25,
+        "sexo": "F",
+        "objetivo": "rendimiento",
+        "deporte": "running",
+        "frecuencia": 6
+      },
+      "respuesta_ideal": "Alto volumen de carrera:\n\nMACROS DIARIOS\n- Proteína: 87g (1.5g/kg)\n- Carbohidratos: 320g\n- Grasas: 60g\n- TOTAL: ~2388 kcal\n\nCenas altas en carbos"
+    }
+  ]
+}

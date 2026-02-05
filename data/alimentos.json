@@ -1,0 +1,1204 @@
+{
+  "alimentos": [
+    {
+      "id": 1,
+      "nombre": "Pechuga de pollo",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 165,
+        "proteina": 31,
+        "carbohidratos": 0,
+        "grasas": 3.6
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 2,
+      "nombre": "Pechuga de pavo",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 135,
+        "proteina": 29,
+        "carbohidratos": 0,
+        "grasas": 1.5
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 3,
+      "nombre": "Carne de res magra",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 250,
+        "proteina": 26,
+        "carbohidratos": 0,
+        "grasas": 15
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 4,
+      "nombre": "Cerdo magro",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 242,
+        "proteina": 27,
+        "carbohidratos": 0,
+        "grasas": 14
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 5,
+      "nombre": "Salmón",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 208,
+        "proteina": 20,
+        "carbohidratos": 0,
+        "grasas": 13
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 6,
+      "nombre": "Atún (fresco)",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 132,
+        "proteina": 29,
+        "carbohidratos": 0,
+        "grasas": 1
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 7,
+      "nombre": "Sardinas",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 208,
+        "proteina": 25,
+        "carbohidratos": 0,
+        "grasas": 11.5
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 8,
+      "nombre": "Huevo (entero)",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 155,
+        "proteina": 13,
+        "carbohidratos": 1.1,
+        "grasas": 11
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 9,
+      "nombre": "Leche entera",
+      "categoria": "lacteo",
+      "por_100g": {
+        "calorias": 61,
+        "proteina": 3.2,
+        "carbohidratos": 4.8,
+        "grasas": 3.3
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 10,
+      "nombre": "Yogur natural (griego)",
+      "categoria": "lacteo",
+      "por_100g": {
+        "calorias": 59,
+        "proteina": 10,
+        "carbohidratos": 3.6,
+        "grasas": 0.4
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 11,
+      "nombre": "Queso fresco",
+      "categoria": "lacteo",
+      "por_100g": {
+        "calorias": 98,
+        "proteina": 11,
+        "carbohidratos": 1,
+        "grasas": 5
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 12,
+      "nombre": "Tofu firme",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 76,
+        "proteina": 8,
+        "carbohidratos": 1.9,
+        "grasas": 4.8
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 13,
+      "nombre": "Tempeh",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 193,
+        "proteina": 20.3,
+        "carbohidratos": 9.4,
+        "grasas": 10.8
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 14,
+      "nombre": "Lentejas (cocidas)",
+      "categoria": "leguminosa",
+      "por_100g": {
+        "calorias": 116,
+        "proteina": 9,
+        "carbohidratos": 20,
+        "grasas": 0.4
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 15,
+      "nombre": "Garbanzos (cocidos)",
+      "categoria": "leguminosa",
+      "por_100g": {
+        "calorias": 164,
+        "proteina": 8.9,
+        "carbohidratos": 27.4,
+        "grasas": 2.6
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 16,
+      "nombre": "Frijoles negros (cocidos)",
+      "categoria": "leguminosa",
+      "por_100g": {
+        "calorias": 132,
+        "proteina": 8.9,
+        "carbohidratos": 23.7,
+        "grasas": 0.5
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 17,
+      "nombre": "Arroz integral (cocido)",
+      "categoria": "cereal",
+      "por_100g": {
+        "calorias": 111,
+        "proteina": 2.6,
+        "carbohidratos": 23,
+        "grasas": 0.9
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 18,
+      "nombre": "Arroz blanco (cocido)",
+      "categoria": "cereal",
+      "por_100g": {
+        "calorias": 130,
+        "proteina": 2.4,
+        "carbohidratos": 28,
+        "grasas": 0.3
+      },
+      "indice_glucemico": "alto"
+    },
+    {
+      "id": 19,
+      "nombre": "Avena (copos, cruda)",
+      "categoria": "cereal",
+      "por_100g": {
+        "calorias": 389,
+        "proteina": 16.9,
+        "carbohidratos": 66.3,
+        "grasas": 6.9
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 20,
+      "nombre": "Quinua (cocida)",
+      "categoria": "cereal",
+      "por_100g": {
+        "calorias": 120,
+        "proteina": 4.4,
+        "carbohidratos": 21.3,
+        "grasas": 1.9
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 21,
+      "nombre": "Pan integral",
+      "categoria": "cereal",
+      "por_100g": {
+        "calorias": 247,
+        "proteina": 8,
+        "carbohidratos": 41,
+        "grasas": 4.2
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 22,
+      "nombre": "Pan blanco",
+      "categoria": "cereal",
+      "por_100g": {
+        "calorias": 265,
+        "proteina": 9,
+        "carbohidratos": 49,
+        "grasas": 3.2
+      },
+      "indice_glucemico": "alto"
+    },
+    {
+      "id": 23,
+      "nombre": "Papa cocida",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 87,
+        "proteina": 2,
+        "carbohidratos": 20.1,
+        "grasas": 0.1
+      },
+      "indice_glucemico": "alto"
+    },
+    {
+      "id": 24,
+      "nombre": "Batata (camote) cocida",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 86,
+        "proteina": 1.6,
+        "carbohidratos": 20.1,
+        "grasas": 0.1
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 25,
+      "nombre": "Maíz (grano cocido)",
+      "categoria": "cereal",
+      "por_100g": {
+        "calorias": 96,
+        "proteina": 3.4,
+        "carbohidratos": 19,
+        "grasas": 1.5
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 26,
+      "nombre": "Harina de trigo",
+      "categoria": "cereal",
+      "por_100g": {
+        "calorias": 364,
+        "proteina": 10.3,
+        "carbohidratos": 76.3,
+        "grasas": 1.6
+      },
+      "indice_glucemico": "alto"
+    },
+    {
+      "id": 27,
+      "nombre": "Plátano (banana)",
+      "categoria": "fruta",
+      "por_100g": {
+        "calorias": 89,
+        "proteina": 1.1,
+        "carbohidratos": 22.8,
+        "grasas": 0.3
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 28,
+      "nombre": "Manzana",
+      "categoria": "fruta",
+      "por_100g": {
+        "calorias": 52,
+        "proteina": 0.3,
+        "carbohidratos": 14,
+        "grasas": 0.2
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 29,
+      "nombre": "Naranja",
+      "categoria": "fruta",
+      "por_100g": {
+        "calorias": 47,
+        "proteina": 0.9,
+        "carbohidratos": 11.8,
+        "grasas": 0.1
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 30,
+      "nombre": "Fresas",
+      "categoria": "fruta",
+      "por_100g": {
+        "calorias": 33,
+        "proteina": 0.7,
+        "carbohidratos": 7.7,
+        "grasas": 0.3
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 31,
+      "nombre": "Arándanos",
+      "categoria": "fruta",
+      "por_100g": {
+        "calorias": 57,
+        "proteina": 0.7,
+        "carbohidratos": 14.5,
+        "grasas": 0.3
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 32,
+      "nombre": "Mango",
+      "categoria": "fruta",
+      "por_100g": {
+        "calorias": 60,
+        "proteina": 0.8,
+        "carbohidratos": 15,
+        "grasas": 0.4
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 33,
+      "nombre": "Aguacate",
+      "categoria": "fruta",
+      "por_100g": {
+        "calorias": 160,
+        "proteina": 2,
+        "carbohidratos": 8.5,
+        "grasas": 14.7
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 34,
+      "nombre": "Tomate",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 18,
+        "proteina": 0.9,
+        "carbohidratos": 3.9,
+        "grasas": 0.2
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 35,
+      "nombre": "Lechuga",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 15,
+        "proteina": 1.4,
+        "carbohidratos": 2.9,
+        "grasas": 0.2
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 36,
+      "nombre": "Espinaca",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 23,
+        "proteina": 2.9,
+        "carbohidratos": 3.6,
+        "grasas": 0.4
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 37,
+      "nombre": "Brócoli",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 34,
+        "proteina": 2.8,
+        "carbohidratos": 6.6,
+        "grasas": 0.4
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 38,
+      "nombre": "Coliflor",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 25,
+        "proteina": 1.9,
+        "carbohidratos": 4.97,
+        "grasas": 0.3
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 39,
+      "nombre": "Zanahoria",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 41,
+        "proteina": 0.9,
+        "carbohidratos": 9.6,
+        "grasas": 0.2
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 40,
+      "nombre": "Cebolla",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 40,
+        "proteina": 1.1,
+        "carbohidratos": 9.3,
+        "grasas": 0.1
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 41,
+      "nombre": "Ajo",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 149,
+        "proteina": 6.4,
+        "carbohidratos": 33.1,
+        "grasas": 0.5
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 42,
+      "nombre": "Pepino",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 16,
+        "proteina": 0.7,
+        "carbohidratos": 3.6,
+        "grasas": 0.1
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 43,
+      "nombre": "Pimiento rojo",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 31,
+        "proteina": 1,
+        "carbohidratos": 6,
+        "grasas": 0.3
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 44,
+      "nombre": "Champiñones",
+      "categoria": "hongos",
+      "por_100g": {
+        "calorias": 22,
+        "proteina": 3.1,
+        "carbohidratos": 3.3,
+        "grasas": 0.3
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 45,
+      "nombre": "Kale (col rizada)",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 49,
+        "proteina": 4.3,
+        "carbohidratos": 8.8,
+        "grasas": 0.9
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 46,
+      "nombre": "Remolacha cocida",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 44,
+        "proteina": 1.6,
+        "carbohidratos": 9.6,
+        "grasas": 0.2
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 47,
+      "nombre": "Guisantes (cocidos)",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 84,
+        "proteina": 5.4,
+        "carbohidratos": 14.5,
+        "grasas": 0.4
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 48,
+      "nombre": "Pera",
+      "categoria": "fruta",
+      "por_100g": {
+        "calorias": 57,
+        "proteina": 0.4,
+        "carbohidratos": 15,
+        "grasas": 0.1
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 49,
+      "nombre": "Piña",
+      "categoria": "fruta",
+      "por_100g": {
+        "calorias": 50,
+        "proteina": 0.5,
+        "carbohidratos": 13.1,
+        "grasas": 0.1
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 50,
+      "nombre": "Uvas",
+      "categoria": "fruta",
+      "por_100g": {
+        "calorias": 69,
+        "proteina": 0.6,
+        "carbohidratos": 18.1,
+        "grasas": 0.2
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 51,
+      "nombre": "Limón",
+      "categoria": "fruta",
+      "por_100g": {
+        "calorias": 29,
+        "proteina": 1.1,
+        "carbohidratos": 9.3,
+        "grasas": 0.3
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 52,
+      "nombre": "Melón",
+      "categoria": "fruta",
+      "por_100g": {
+        "calorias": 34,
+        "proteina": 0.8,
+        "carbohidratos": 8.2,
+        "grasas": 0.2
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 53,
+      "nombre": "Sandía",
+      "categoria": "fruta",
+      "por_100g": {
+        "calorias": 30,
+        "proteina": 0.6,
+        "carbohidratos": 7.6,
+        "grasas": 0.2
+      },
+      "indice_glucemico": "alto"
+    },
+    {
+      "id": 54,
+      "nombre": "Almendras",
+      "categoria": "frutos secos",
+      "por_100g": {
+        "calorias": 579,
+        "proteina": 21.2,
+        "carbohidratos": 21.6,
+        "grasas": 49.9
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 55,
+      "nombre": "Nueces",
+      "categoria": "frutos secos",
+      "por_100g": {
+        "calorias": 654,
+        "proteina": 15.2,
+        "carbohidratos": 13.7,
+        "grasas": 65.2
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 56,
+      "nombre": "Pistachos",
+      "categoria": "frutos secos",
+      "por_100g": {
+        "calorias": 562,
+        "proteina": 20.6,
+        "carbohidratos": 27.5,
+        "grasas": 45
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 57,
+      "nombre": "Cacahuates (maní)",
+      "categoria": "frutos secos",
+      "por_100g": {
+        "calorias": 567,
+        "proteina": 25.8,
+        "carbohidratos": 16.1,
+        "grasas": 49.2
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 58,
+      "nombre": "Semillas de chía",
+      "categoria": "semilla",
+      "por_100g": {
+        "calorias": 486,
+        "proteina": 16.5,
+        "carbohidratos": 42.1,
+        "grasas": 30.7
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 59,
+      "nombre": "Semillas de lino (linaza)",
+      "categoria": "semilla",
+      "por_100g": {
+        "calorias": 534,
+        "proteina": 18.3,
+        "carbohidratos": 28.9,
+        "grasas": 42.2
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 60,
+      "nombre": "Semillas de girasol",
+      "categoria": "semilla",
+      "por_100g": {
+        "calorias": 584,
+        "proteina": 20.8,
+        "carbohidratos": 20,
+        "grasas": 51.5
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 61,
+      "nombre": "Aceite de oliva",
+      "categoria": "grasa",
+      "por_100g": {
+        "calorias": 884,
+        "proteina": 0,
+        "carbohidratos": 0,
+        "grasas": 100
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 62,
+      "nombre": "Aceite de coco",
+      "categoria": "grasa",
+      "por_100g": {
+        "calorias": 892,
+        "proteina": 0,
+        "carbohidratos": 0,
+        "grasas": 100
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 63,
+      "nombre": "Mantequilla",
+      "categoria": "grasa",
+      "por_100g": {
+        "calorias": 717,
+        "proteina": 0.9,
+        "carbohidratos": 0.1,
+        "grasas": 81
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 64,
+      "nombre": "Miel",
+      "categoria": "endulzante",
+      "por_100g": {
+        "calorias": 304,
+        "proteina": 0.3,
+        "carbohidratos": 82.4,
+        "grasas": 0
+      },
+      "indice_glucemico": "alto"
+    },
+    {
+      "id": 65,
+      "nombre": "Azúcar (sacarosa)",
+      "categoria": "endulzante",
+      "por_100g": {
+        "calorias": 387,
+        "proteina": 0,
+        "carbohidratos": 100,
+        "grasas": 0
+      },
+      "indice_glucemico": "alto"
+    },
+    {
+      "id": 66,
+      "nombre": "Chocolate oscuro 70%",
+      "categoria": "dulce",
+      "por_100g": {
+        "calorias": 598,
+        "proteina": 7.8,
+        "carbohidratos": 46.4,
+        "grasas": 42.6
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 67,
+      "nombre": "Café (negro)",
+      "categoria": "bebida",
+      "por_100g": {
+        "calorias": 1,
+        "proteina": 0.1,
+        "carbohidratos": 0,
+        "grasas": 0
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 68,
+      "nombre": "Té verde",
+      "categoria": "bebida",
+      "por_100g": {
+        "calorias": 1,
+        "proteina": 0,
+        "carbohidratos": 0,
+        "grasas": 0
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 69,
+      "nombre": "Camarón",
+      "categoria": "marisco",
+      "por_100g": {
+        "calorias": 99,
+        "proteina": 24,
+        "carbohidratos": 0.2,
+        "grasas": 0.3
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 70,
+      "nombre": "Mejillones",
+      "categoria": "marisco",
+      "por_100g": {
+        "calorias": 86,
+        "proteina": 12,
+        "carbohidratos": 3.7,
+        "grasas": 2.2
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 71,
+      "nombre": "Calamares",
+      "categoria": "marisco",
+      "por_100g": {
+        "calorias": 92,
+        "proteina": 15.6,
+        "carbohidratos": 3.1,
+        "grasas": 1.4
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 72,
+      "nombre": "Soja (granos secos)",
+      "categoria": "leguminosa",
+      "por_100g": {
+        "calorias": 446,
+        "proteina": 36.5,
+        "carbohidratos": 30.2,
+        "grasas": 19.9
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 73,
+      "nombre": "Edamame (cocido)",
+      "categoria": "leguminosa",
+      "por_100g": {
+        "calorias": 121,
+        "proteina": 11.9,
+        "carbohidratos": 8.9,
+        "grasas": 5.2
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 74,
+      "nombre": "Leche de almendra (sin azúcar)",
+      "categoria": "bebida",
+      "por_100g": {
+        "calorias": 15,
+        "proteina": 0.4,
+        "carbohidratos": 0.3,
+        "grasas": 1.2
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 75,
+      "nombre": "Ricotta",
+      "categoria": "lacteo",
+      "por_100g": {
+        "calorias": 174,
+        "proteina": 11,
+        "carbohidratos": 3,
+        "grasas": 13
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 76,
+      "nombre": "Mozzarella",
+      "categoria": "lacteo",
+      "por_100g": {
+        "calorias": 280,
+        "proteina": 28.3,
+        "carbohidratos": 3.1,
+        "grasas": 17.1
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 77,
+      "nombre": "Parmesano",
+      "categoria": "lacteo",
+      "por_100g": {
+        "calorias": 431,
+        "proteina": 38,
+        "carbohidratos": 4.1,
+        "grasas": 29
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 78,
+      "nombre": "Hummus",
+      "categoria": "leguminosa",
+      "por_100g": {
+        "calorias": 166,
+        "proteina": 7.9,
+        "carbohidratos": 14.3,
+        "grasas": 9.6
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 79,
+      "nombre": "Tahini",
+      "categoria": "semilla",
+      "por_100g": {
+        "calorias": 595,
+        "proteina": 17,
+        "carbohidratos": 17,
+        "grasas": 53
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 80,
+      "nombre": "Tofu sedoso",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 55,
+        "proteina": 5.3,
+        "carbohidratos": 1.9,
+        "grasas": 2.8
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 81,
+      "nombre": "Hígado de res",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 135,
+        "proteina": 20.4,
+        "carbohidratos": 3.9,
+        "grasas": 3.6
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 82,
+      "nombre": "Caballa (mackerel)",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 205,
+        "proteina": 19,
+        "carbohidratos": 0,
+        "grasas": 13.9
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 83,
+      "nombre": "Tilapia",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 128,
+        "proteina": 26,
+        "carbohidratos": 0,
+        "grasas": 2.7
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 84,
+      "nombre": "Pulpo",
+      "categoria": "marisco",
+      "por_100g": {
+        "calorias": 82,
+        "proteina": 14.9,
+        "carbohidratos": 3.1,
+        "grasas": 1
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 85,
+      "nombre": "Chocolate con leche",
+      "categoria": "dulce",
+      "por_100g": {
+        "calorias": 535,
+        "proteina": 7.6,
+        "carbohidratos": 59.4,
+        "grasas": 30.4
+      },
+      "indice_glucemico": "alto"
+    },
+    {
+      "id": 86,
+      "nombre": "Pan pita integral",
+      "categoria": "cereal",
+      "por_100g": {
+        "calorias": 275,
+        "proteina": 9,
+        "carbohidratos": 55,
+        "grasas": 3
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 87,
+      "nombre": "Tortilla de maíz",
+      "categoria": "cereal",
+      "por_100g": {
+        "calorias": 218,
+        "proteina": 5.7,
+        "carbohidratos": 44.2,
+        "grasas": 2.7
+      },
+      "indice_glucemico": "alto"
+    },
+    {
+      "id": 88,
+      "nombre": "Semillas de calabaza (pepitas)",
+      "categoria": "semilla",
+      "por_100g": {
+        "calorias": 559,
+        "proteina": 30.2,
+        "carbohidratos": 10.7,
+        "grasas": 49.1
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 89,
+      "nombre": "Mantequilla de cacahuate",
+      "categoria": "frutos secos",
+      "por_100g": {
+        "calorias": 588,
+        "proteina": 25,
+        "carbohidratos": 20,
+        "grasas": 50
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 90,
+      "nombre": "Leche descremada",
+      "categoria": "lacteo",
+      "por_100g": {
+        "calorias": 35,
+        "proteina": 3.4,
+        "carbohidratos": 5,
+        "grasas": 0.1
+      },
+      "indice_glucemico": "medio"
+    },
+    {
+      "id": 91,
+      "nombre": "Crema de leche",
+      "categoria": "lacteo",
+      "por_100g": {
+        "calorias": 340,
+        "proteina": 2,
+        "carbohidratos": 3,
+        "grasas": 36
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 92,
+      "nombre": "Semillas de sésamo",
+      "categoria": "semilla",
+      "por_100g": {
+        "calorias": 573,
+        "proteina": 17,
+        "carbohidratos": 23.4,
+        "grasas": 49.7
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 93,
+      "nombre": "Okra",
+      "categoria": "verdura",
+      "por_100g": {
+        "calorias": 33,
+        "proteina": 2,
+        "carbohidratos": 7,
+        "grasas": 0.2
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 94,
+      "nombre": "Alga nori",
+      "categoria": "alga",
+      "por_100g": {
+        "calorias": 35,
+        "proteina": 5.8,
+        "carbohidratos": 5.1,
+        "grasas": 0.3
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 95,
+      "nombre": "Miso (pasta)",
+      "categoria": "condimento",
+      "por_100g": {
+        "calorias": 199,
+        "proteina": 12,
+        "carbohidratos": 26,
+        "grasas": 6
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 96,
+      "nombre": "Soja texturizada",
+      "categoria": "proteina",
+      "por_100g": {
+        "calorias": 345,
+        "proteina": 50,
+        "carbohidratos": 30,
+        "grasas": 1.5
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 97,
+      "nombre": "Sirope de arce (maple syrup)",
+      "categoria": "endulzante",
+      "por_100g": {
+        "calorias": 260,
+        "proteina": 0,
+        "carbohidratos": 67,
+        "grasas": 0
+      },
+      "indice_glucemico": "alto"
+    },
+    {
+      "id": 98,
+      "nombre": "Aceitunas",
+      "categoria": "condimento",
+      "por_100g": {
+        "calorias": 115,
+        "proteina": 0.8,
+        "carbohidratos": 6.3,
+        "grasas": 10.9
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 99,
+      "nombre": "Cacao en polvo (sin azúcar)",
+      "categoria": "ingrediente",
+      "por_100g": {
+        "calorias": 228,
+        "proteina": 19.6,
+        "carbohidratos": 57.9,
+        "grasas": 13.7
+      },
+      "indice_glucemico": "bajo"
+    },
+    {
+      "id": 100,
+      "nombre": "Miel de abeja (variedad local)",
+      "categoria": "endulzante",
+      "por_100g": {
+        "calorias": 304,
+        "proteina": 0.3,
+        "carbohidratos": 82.4,
+        "grasas": 0
+      },
+      "indice_glucemico": "alto"
+    }
+  ]
+}

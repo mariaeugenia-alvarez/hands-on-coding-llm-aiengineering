@@ -1,0 +1,1505 @@
+{
+  "recetas": [
+    {
+      "id": 1,
+      "nombre": "Pollo con arroz integral y brócoli",
+      "ingredientes": [
+        {
+          "alimento_id": 1,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 17,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 37,
+          "cantidad": 100
+        }
+      ],
+      "macros_totales": {
+        "proteina": 51.9,
+        "carbos": 29.6,
+        "grasas": 6.7
+      },
+      "tiempo_preparacion": "30min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "crossfit",
+        "gym",
+        "running"
+      ],
+      "calorias_totales": 392.5
+    },
+    {
+      "id": 2,
+      "nombre": "Salmón al horno con quinoa y espinacas",
+      "ingredientes": [
+        {
+          "alimento_id": 5,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 20,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 36,
+          "cantidad": 80
+        }
+      ],
+      "macros_totales": {
+        "proteina": 36.72,
+        "carbos": 24.18,
+        "grasas": 21.72
+      },
+      "tiempo_preparacion": "35min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "gym",
+        "recuperacion"
+      ],
+      "calorias_totales": 450.4
+    },
+    {
+      "id": 3,
+      "nombre": "Ensalada de atún y aguacate",
+      "ingredientes": [
+        {
+          "alimento_id": 6,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 33,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 34,
+          "cantidad": 50
+        }
+      ],
+      "macros_totales": {
+        "proteina": 37.25,
+        "carbos": 10.45,
+        "grasas": 16.0
+      },
+      "tiempo_preparacion": "10min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "keto",
+        "gym"
+      ],
+      "calorias_totales": 327.4
+    },
+    {
+      "id": 4,
+      "nombre": "Tacos de frijoles negros y pico de gallo",
+      "ingredientes": [
+        {
+          "alimento_id": 16,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 43,
+          "cantidad": 50
+        },
+        {
+          "alimento_id": 22,
+          "cantidad": 60
+        }
+      ],
+      "macros_totales": {
+        "proteina": 19.25,
+        "carbos": 67.95,
+        "grasas": 2.82
+      },
+      "tiempo_preparacion": "20min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "vegano",
+        "running"
+      ],
+      "calorias_totales": 372.5
+    },
+    {
+      "id": 5,
+      "nombre": "Guiso de lentejas con zanahoria",
+      "ingredientes": [
+        {
+          "alimento_id": 14,
+          "cantidad": 200
+        },
+        {
+          "alimento_id": 39,
+          "cantidad": 80
+        },
+        {
+          "alimento_id": 40,
+          "cantidad": 50
+        }
+      ],
+      "macros_totales": {
+        "proteina": 19.27,
+        "carbos": 52.33,
+        "grasas": 1.01
+      },
+      "tiempo_preparacion": "40min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "vegano",
+        "endurance"
+      ],
+      "calorias_totales": 284.8
+    },
+    {
+      "id": 6,
+      "nombre": "Bowl de quinoa, garbanzos y verduras rostizadas",
+      "ingredientes": [
+        {
+          "alimento_id": 20,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 15,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 37,
+          "cantidad": 100
+        }
+      ],
+      "macros_totales": {
+        "proteina": 18.76,
+        "carbos": 65.04,
+        "grasas": 5.8
+      },
+      "tiempo_preparacion": "30min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "vegano",
+        "gym"
+      ],
+      "calorias_totales": 374.8
+    },
+    {
+      "id": 7,
+      "nombre": "Omelette de claras con espinacas y champiñones",
+      "ingredientes": [
+        {
+          "alimento_id": 8,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 36,
+          "cantidad": 50
+        },
+        {
+          "alimento_id": 44,
+          "cantidad": 50
+        }
+      ],
+      "macros_totales": {
+        "proteina": 22.5,
+        "carbos": 5.1,
+        "grasas": 16.85
+      },
+      "tiempo_preparacion": "12min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "gym",
+        "desayuno"
+      ],
+      "calorias_totales": 255.0
+    },
+    {
+      "id": 8,
+      "nombre": "Pasta integral con salsa de tomate y pollo",
+      "ingredientes": [
+        {
+          "alimento_id": 1,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 21,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 34,
+          "cantidad": 80
+        }
+      ],
+      "macros_totales": {
+        "proteina": 47.52,
+        "carbos": 52.32,
+        "grasas": 9.52
+      },
+      "tiempo_preparacion": "25min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "carbo-load",
+        "running"
+      ],
+      "calorias_totales": 508.8
+    },
+    {
+      "id": 9,
+      "nombre": "Ensalada mediterránea con garbanzos y tahini",
+      "ingredientes": [
+        {
+          "alimento_id": 15,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 98,
+          "cantidad": 30
+        },
+        {
+          "alimento_id": 79,
+          "cantidad": 20
+        }
+      ],
+      "macros_totales": {
+        "proteina": 14.32,
+        "carbos": 38.17,
+        "grasas": 16.99
+      },
+      "tiempo_preparacion": "10min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "vegano",
+        "salud"
+      ],
+      "calorias_totales": 350.3
+    },
+    {
+      "id": 10,
+      "nombre": "Bowl de hummus, pitas y vegetales",
+      "ingredientes": [
+        {
+          "alimento_id": 78,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 86,
+          "cantidad": 80
+        },
+        {
+          "alimento_id": 35,
+          "cantidad": 50
+        }
+      ],
+      "macros_totales": {
+        "proteina": 15.8,
+        "carbos": 59.75,
+        "grasas": 12.1
+      },
+      "tiempo_preparacion": "10min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "vegano",
+        "picnic"
+      ],
+      "calorias_totales": 393.5
+    },
+    {
+      "id": 11,
+      "nombre": "Stir-fry de ternera con pimientos",
+      "ingredientes": [
+        {
+          "alimento_id": 3,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 43,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 42,
+          "cantidad": 50
+        }
+      ],
+      "macros_totales": {
+        "proteina": 40.35,
+        "carbos": 7.8,
+        "grasas": 22.85
+      },
+      "tiempo_preparacion": "20min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "gym",
+        "musculacion"
+      ],
+      "calorias_totales": 414.0
+    },
+    {
+      "id": 12,
+      "nombre": "Sopa de pollo, verduras y fideos integrales",
+      "ingredientes": [
+        {
+          "alimento_id": 1,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 21,
+          "cantidad": 80
+        },
+        {
+          "alimento_id": 37,
+          "cantidad": 80
+        }
+      ],
+      "macros_totales": {
+        "proteina": 45.84,
+        "carbos": 38.08,
+        "grasas": 8.0
+      },
+      "tiempo_preparacion": "40min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "recuperacion",
+        "confort"
+      ],
+      "calorias_totales": 422.8
+    },
+    {
+      "id": 13,
+      "nombre": "Burrito bowl con pollo, maíz y aguacate",
+      "ingredientes": [
+        {
+          "alimento_id": 1,
+          "cantidad": 140
+        },
+        {
+          "alimento_id": 25,
+          "cantidad": 80
+        },
+        {
+          "alimento_id": 33,
+          "cantidad": 80
+        }
+      ],
+      "macros_totales": {
+        "proteina": 47.72,
+        "carbos": 22.0,
+        "grasas": 18.0
+      },
+      "tiempo_preparacion": "20min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "gym",
+        "crossfit"
+      ],
+      "calorias_totales": 435.8
+    },
+    {
+      "id": 14,
+      "nombre": "Tofu salteado con brócoli y arroz integral",
+      "ingredientes": [
+        {
+          "alimento_id": 12,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 37,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 17,
+          "cantidad": 100
+        }
+      ],
+      "macros_totales": {
+        "proteina": 17.4,
+        "carbos": 32.45,
+        "grasas": 8.5
+      },
+      "tiempo_preparacion": "25min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "vegano",
+        "gym"
+      ],
+      "calorias_totales": 259.0
+    },
+    {
+      "id": 15,
+      "nombre": "Filete de tilapia con ensalada verde",
+      "ingredientes": [
+        {
+          "alimento_id": 83,
+          "cantidad": 160
+        },
+        {
+          "alimento_id": 35,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 34,
+          "cantidad": 50
+        }
+      ],
+      "macros_totales": {
+        "proteina": 43.45,
+        "carbos": 4.85,
+        "grasas": 4.62
+      },
+      "tiempo_preparacion": "20min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "definicion",
+        "running"
+      ],
+      "calorias_totales": 228.8
+    },
+    {
+      "id": 16,
+      "nombre": "Ensalada de quinoa, almendras y arándanos",
+      "ingredientes": [
+        {
+          "alimento_id": 20,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 54,
+          "cantidad": 30
+        },
+        {
+          "alimento_id": 31,
+          "cantidad": 50
+        }
+      ],
+      "macros_totales": {
+        "proteina": 11.99,
+        "carbos": 39.29,
+        "grasas": 17.4
+      },
+      "tiempo_preparacion": "15min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "vegano",
+        "desayuno"
+      ],
+      "calorias_totales": 346.2
+    },
+    {
+      "id": 17,
+      "nombre": "Sopa miso con tofu y algas",
+      "ingredientes": [
+        {
+          "alimento_id": 95,
+          "cantidad": 30
+        },
+        {
+          "alimento_id": 80,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 94,
+          "cantidad": 10
+        }
+      ],
+      "macros_totales": {
+        "proteina": 9.48,
+        "carbos": 10.21,
+        "grasas": 4.63
+      },
+      "tiempo_preparacion": "15min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "ligero",
+        "vegano"
+      ],
+      "calorias_totales": 118.2
+    },
+    {
+      "id": 18,
+      "nombre": "Pavo al curry con arroz basmati",
+      "ingredientes": [
+        {
+          "alimento_id": 2,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 17,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 40,
+          "cantidad": 50
+        }
+      ],
+      "macros_totales": {
+        "proteina": 47.17,
+        "carbos": 32.25,
+        "grasas": 3.38
+      },
+      "tiempo_preparacion": "35min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "gym",
+        "familia"
+      ],
+      "calorias_totales": 355.7
+    },
+    {
+      "id": 19,
+      "nombre": "Pizza casera integral con pollo y verduras",
+      "ingredientes": [
+        {
+          "alimento_id": 1,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 21,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 43,
+          "cantidad": 60
+        }
+      ],
+      "macros_totales": {
+        "proteina": 43.6,
+        "carbos": 65.1,
+        "grasas": 10.08
+      },
+      "tiempo_preparacion": "40min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "social",
+        "carbo-load"
+      ],
+      "calorias_totales": 554.1
+    },
+    {
+      "id": 20,
+      "nombre": "Ensalada César con pollo y queso",
+      "ingredientes": [
+        {
+          "alimento_id": 1,
+          "cantidad": 130
+        },
+        {
+          "alimento_id": 76,
+          "cantidad": 30
+        },
+        {
+          "alimento_id": 35,
+          "cantidad": 60
+        }
+      ],
+      "macros_totales": {
+        "proteina": 49.63,
+        "carbos": 2.67,
+        "grasas": 9.93
+      },
+      "tiempo_preparacion": "15min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "gym",
+        "almuerzo"
+      ],
+      "calorias_totales": 307.5
+    },
+    {
+      "id": 21,
+      "nombre": "Bowl energético de avena con frutas y semillas",
+      "ingredientes": [
+        {
+          "alimento_id": 19,
+          "cantidad": 80
+        },
+        {
+          "alimento_id": 58,
+          "cantidad": 20
+        },
+        {
+          "alimento_id": 27,
+          "cantidad": 100
+        }
+      ],
+      "macros_totales": {
+        "proteina": 17.92,
+        "carbos": 84.26,
+        "grasas": 11.96
+      },
+      "tiempo_preparacion": "5min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "desayuno",
+        "running"
+      ],
+      "calorias_totales": 497.4
+    },
+    {
+      "id": 22,
+      "nombre": "Hamburguesa de res magra con ensalada",
+      "ingredientes": [
+        {
+          "alimento_id": 3,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 21,
+          "cantidad": 80
+        },
+        {
+          "alimento_id": 35,
+          "cantidad": 60
+        }
+      ],
+      "macros_totales": {
+        "proteina": 46.24,
+        "carbos": 34.54,
+        "grasas": 25.98
+      },
+      "tiempo_preparacion": "25min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "gym",
+        "comida"
+      ],
+      "calorias_totales": 581.6
+    },
+    {
+      "id": 23,
+      "nombre": "Sándwich integral de pavo y aguacate",
+      "ingredientes": [
+        {
+          "alimento_id": 2,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 21,
+          "cantidad": 80
+        },
+        {
+          "alimento_id": 33,
+          "cantidad": 60
+        }
+      ],
+      "macros_totales": {
+        "proteina": 36.6,
+        "carbos": 37.9,
+        "grasas": 13.68
+      },
+      "tiempo_preparacion": "10min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "almuerzo",
+        "viaje"
+      ],
+      "calorias_totales": 428.6
+    },
+    {
+      "id": 24,
+      "nombre": "Curry de garbanzos con arroz",
+      "ingredientes": [
+        {
+          "alimento_id": 15,
+          "cantidad": 180
+        },
+        {
+          "alimento_id": 17,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 40,
+          "cantidad": 40
+        }
+      ],
+      "macros_totales": {
+        "proteina": 19.58,
+        "carbos": 80.64,
+        "grasas": 5.8
+      },
+      "tiempo_preparacion": "30min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "vegano",
+        "endurance"
+      ],
+      "calorias_totales": 444.4
+    },
+    {
+      "id": 25,
+      "nombre": "Ensalada de salmón ahumado y aguacate",
+      "ingredientes": [
+        {
+          "alimento_id": 5,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 33,
+          "cantidad": 80
+        },
+        {
+          "alimento_id": 35,
+          "cantidad": 50
+        }
+      ],
+      "macros_totales": {
+        "proteina": 22.3,
+        "carbos": 8.25,
+        "grasas": 24.86
+      },
+      "tiempo_preparacion": "10min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "omega-3",
+        "recuperacion"
+      ],
+      "calorias_totales": 343.5
+    },
+    {
+      "id": 26,
+      "nombre": "Bowl de edamame, quinoa y verduras",
+      "ingredientes": [
+        {
+          "alimento_id": 73,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 20,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 37,
+          "cantidad": 80
+        }
+      ],
+      "macros_totales": {
+        "proteina": 24.49,
+        "carbos": 39.93,
+        "grasas": 10.02
+      },
+      "tiempo_preparacion": "20min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "vegano",
+        "gym"
+      ],
+      "calorias_totales": 328.7
+    },
+    {
+      "id": 27,
+      "nombre": "Sándwich de atún con yogur griego",
+      "ingredientes": [
+        {
+          "alimento_id": 6,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 10,
+          "cantidad": 50
+        },
+        {
+          "alimento_id": 21,
+          "cantidad": 80
+        }
+      ],
+      "macros_totales": {
+        "proteina": 46.2,
+        "carbos": 34.6,
+        "grasas": 4.76
+      },
+      "tiempo_preparacion": "10min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "almuerzo",
+        "gym"
+      ],
+      "calorias_totales": 385.5
+    },
+    {
+      "id": 28,
+      "nombre": "Pollo a la plancha con batata asada",
+      "ingredientes": [
+        {
+          "alimento_id": 1,
+          "cantidad": 160
+        },
+        {
+          "alimento_id": 24,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 61,
+          "cantidad": 10
+        }
+      ],
+      "macros_totales": {
+        "proteina": 52.0,
+        "carbos": 30.15,
+        "grasas": 15.91
+      },
+      "tiempo_preparacion": "35min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "carbo-load",
+        "gym"
+      ],
+      "calorias_totales": 481.4
+    },
+    {
+      "id": 29,
+      "nombre": "Ensalada templada de lentejas y queso fresco",
+      "ingredientes": [
+        {
+          "alimento_id": 14,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 11,
+          "cantidad": 60
+        },
+        {
+          "alimento_id": 35,
+          "cantidad": 50
+        }
+      ],
+      "macros_totales": {
+        "proteina": 20.8,
+        "carbos": 32.05,
+        "grasas": 3.7
+      },
+      "tiempo_preparacion": "20min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "vegano opcional",
+        "salud"
+      ],
+      "calorias_totales": 240.3
+    },
+    {
+      "id": 30,
+      "nombre": "Revuelto de huevo con espinacas y tomate",
+      "ingredientes": [
+        {
+          "alimento_id": 8,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 36,
+          "cantidad": 50
+        },
+        {
+          "alimento_id": 34,
+          "cantidad": 50
+        }
+      ],
+      "macros_totales": {
+        "proteina": 17.5,
+        "carbos": 5.07,
+        "grasas": 13.5
+      },
+      "tiempo_preparacion": "10min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "desayuno",
+        "gym"
+      ],
+      "calorias_totales": 206.5
+    },
+    {
+      "id": 31,
+      "nombre": "Bowl de arroz integral, tofu y brotes",
+      "ingredientes": [
+        {
+          "alimento_id": 17,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 12,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 35,
+          "cantidad": 40
+        }
+      ],
+      "macros_totales": {
+        "proteina": 16.46,
+        "carbos": 38.51,
+        "grasas": 8.63
+      },
+      "tiempo_preparacion": "25min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "vegano",
+        "estudiar"
+      ],
+      "calorias_totales": 286.5
+    },
+    {
+      "id": 32,
+      "nombre": "Ensalada de quinoa, pollo y mango",
+      "ingredientes": [
+        {
+          "alimento_id": 20,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 1,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 32,
+          "cantidad": 80
+        }
+      ],
+      "macros_totales": {
+        "proteina": 42.24,
+        "carbos": 33.3,
+        "grasas": 6.54
+      },
+      "tiempo_preparacion": "20min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "verano",
+        "gym"
+      ],
+      "calorias_totales": 366.0
+    },
+    {
+      "id": 33,
+      "nombre": "Salmón con puré de patata y espárragos",
+      "ingredientes": [
+        {
+          "alimento_id": 5,
+          "cantidad": 160
+        },
+        {
+          "alimento_id": 23,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 37,
+          "cantidad": 80
+        }
+      ],
+      "macros_totales": {
+        "proteina": 37.24,
+        "carbos": 35.43,
+        "grasas": 21.27
+      },
+      "tiempo_preparacion": "35min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "cena",
+        "recuperacion"
+      ],
+      "calorias_totales": 490.5
+    },
+    {
+      "id": 34,
+      "nombre": "Ensalada de garbanzos, pepino y tomate",
+      "ingredientes": [
+        {
+          "alimento_id": 15,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 42,
+          "cantidad": 80
+        },
+        {
+          "alimento_id": 34,
+          "cantidad": 80
+        }
+      ],
+      "macros_totales": {
+        "proteina": 14.63,
+        "carbos": 47.1,
+        "grasas": 4.14
+      },
+      "tiempo_preparacion": "10min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "vegano",
+        "ligero"
+      ],
+      "calorias_totales": 273.2
+    },
+    {
+      "id": 35,
+      "nombre": "Bowl proteico con soja texturizada y verduras",
+      "ingredientes": [
+        {
+          "alimento_id": 96,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 37,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 36,
+          "cantidad": 50
+        }
+      ],
+      "macros_totales": {
+        "proteina": 64.25,
+        "carbos": 44.4,
+        "grasas": 2.4
+      },
+      "tiempo_preparacion": "20min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "vegano",
+        "musculacion"
+      ],
+      "calorias_totales": 459.5
+    },
+    {
+      "id": 36,
+      "nombre": "Merluza al vapor con limon y ensalada",
+      "ingredientes": [
+        {
+          "alimento_id": 83,
+          "cantidad": 160
+        },
+        {
+          "alimento_id": 51,
+          "cantidad": 10
+        },
+        {
+          "alimento_id": 35,
+          "cantidad": 60
+        }
+      ],
+      "macros_totales": {
+        "proteina": 42.55,
+        "carbos": 2.67,
+        "grasas": 4.47
+      },
+      "tiempo_preparacion": "18min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "definicion",
+        "cena ligera"
+      ],
+      "calorias_totales": 216.7
+    },
+    {
+      "id": 37,
+      "nombre": "Ensalada de frutas con yogur y nueces",
+      "ingredientes": [
+        {
+          "alimento_id": 28,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 10,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 55,
+          "cantidad": 20
+        }
+      ],
+      "macros_totales": {
+        "proteina": 13.34,
+        "carbos": 20.34,
+        "grasas": 13.64
+      },
+      "tiempo_preparacion": "8min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "desayuno",
+        "snack"
+      ],
+      "calorias_totales": 241.8
+    },
+    {
+      "id": 38,
+      "nombre": "Pasta integral con salsa de tomate y tofu",
+      "ingredientes": [
+        {
+          "alimento_id": 21,
+          "cantidad": 140
+        },
+        {
+          "alimento_id": 12,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 34,
+          "cantidad": 60
+        }
+      ],
+      "macros_totales": {
+        "proteina": 21.34,
+        "carbos": 62.02,
+        "grasas": 11.76
+      },
+      "tiempo_preparacion": "25min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "vegano opcional",
+        "running"
+      ],
+      "calorias_totales": 447.8
+    },
+    {
+      "id": 39,
+      "nombre": "Brochetas de camarón con ensalada de pepino",
+      "ingredientes": [
+        {
+          "alimento_id": 69,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 42,
+          "cantidad": 80
+        },
+        {
+          "alimento_id": 34,
+          "cantidad": 40
+        }
+      ],
+      "macros_totales": {
+        "proteina": 36.92,
+        "carbos": 4.74,
+        "grasas": 0.61
+      },
+      "tiempo_preparacion": "18min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "cena ligera",
+        "gym"
+      ],
+      "calorias_totales": 168.5
+    },
+    {
+      "id": 40,
+      "nombre": "Sopa cremosa de calabaza y semillas",
+      "ingredientes": [
+        {
+          "alimento_id": 46,
+          "cantidad": 200
+        },
+        {
+          "alimento_id": 88,
+          "cantidad": 20
+        },
+        {
+          "alimento_id": 61,
+          "cantidad": 10
+        }
+      ],
+      "macros_totales": {
+        "proteina": 9.24,
+        "carbos": 21.34,
+        "grasas": 20.22
+      },
+      "tiempo_preparacion": "35min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "vegano",
+        "invierno"
+      ],
+      "calorias_totales": 288.2
+    },
+    {
+      "id": 41,
+      "nombre": "Ensalada de espinacas con queso de cabra y nueces",
+      "ingredientes": [
+        {
+          "alimento_id": 36,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 55,
+          "cantidad": 25
+        },
+        {
+          "alimento_id": 76,
+          "cantidad": 30
+        }
+      ],
+      "macros_totales": {
+        "proteina": 15.19,
+        "carbos": 7.96,
+        "grasas": 21.83
+      },
+      "tiempo_preparacion": "10min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "ensalada",
+        "snack"
+      ],
+      "calorias_totales": 270.5
+    },
+    {
+      "id": 42,
+      "nombre": "Salteado de calamares con arroz y verduras",
+      "ingredientes": [
+        {
+          "alimento_id": 71,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 17,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 43,
+          "cantidad": 70
+        }
+      ],
+      "macros_totales": {
+        "proteina": 27.22,
+        "carbos": 36.45,
+        "grasas": 3.39
+      },
+      "tiempo_preparacion": "20min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "gym",
+        "mariscos"
+      ],
+      "calorias_totales": 292.9
+    },
+    {
+      "id": 43,
+      "nombre": "Tostadas integrales con aguacate y huevo",
+      "ingredientes": [
+        {
+          "alimento_id": 33,
+          "cantidad": 80
+        },
+        {
+          "alimento_id": 8,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 21,
+          "cantidad": 70
+        }
+      ],
+      "macros_totales": {
+        "proteina": 20.2,
+        "carbos": 36.6,
+        "grasas": 25.7
+      },
+      "tiempo_preparacion": "10min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "desayuno",
+        "gym"
+      ],
+      "calorias_totales": 455.9
+    },
+    {
+      "id": 44,
+      "nombre": "Bowl de frutas, yogur griego y chía",
+      "ingredientes": [
+        {
+          "alimento_id": 10,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 30,
+          "cantidad": 100
+        },
+        {
+          "alimento_id": 58,
+          "cantidad": 15
+        }
+      ],
+      "macros_totales": {
+        "proteina": 15.17,
+        "carbos": 18.34,
+        "grasas": 5.38
+      },
+      "tiempo_preparacion": "5min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "desayuno",
+        "recuperacion"
+      ],
+      "calorias_totales": 176.7
+    },
+    {
+      "id": 45,
+      "nombre": "Pollo al pesto con pasta integral",
+      "ingredientes": [
+        {
+          "alimento_id": 1,
+          "cantidad": 140
+        },
+        {
+          "alimento_id": 21,
+          "cantidad": 140
+        },
+        {
+          "alimento_id": 61,
+          "cantidad": 15
+        }
+      ],
+      "macros_totales": {
+        "proteina": 54.6,
+        "carbos": 57.4,
+        "grasas": 25.92
+      },
+      "tiempo_preparacion": "30min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "gym",
+        "familia"
+      ],
+      "calorias_totales": 709.4
+    },
+    {
+      "id": 46,
+      "nombre": "Salteado de tofu con salsa teriyaki y arroz",
+      "ingredientes": [
+        {
+          "alimento_id": 12,
+          "cantidad": 150
+        },
+        {
+          "alimento_id": 17,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 40,
+          "cantidad": 40
+        }
+      ],
+      "macros_totales": {
+        "proteina": 15.56,
+        "carbos": 34.17,
+        "grasas": 8.32
+      },
+      "tiempo_preparacion": "25min",
+      "dificultad": "medio",
+      "ideal_para": [
+        "vegano",
+        "gym"
+      ],
+      "calorias_totales": 263.2
+    },
+    {
+      "id": 47,
+      "nombre": "Ensalada de remolacha, queso y nueces",
+      "ingredientes": [
+        {
+          "alimento_id": 46,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 77,
+          "cantidad": 30
+        },
+        {
+          "alimento_id": 55,
+          "cantidad": 20
+        }
+      ],
+      "macros_totales": {
+        "proteina": 16.36,
+        "carbos": 15.49,
+        "grasas": 21.98
+      },
+      "tiempo_preparacion": "15min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "ensalada",
+        "vegetariano"
+      ],
+      "calorias_totales": 312.9
+    },
+    {
+      "id": 48,
+      "nombre": "Wrap integral de hummus, pollo y verduras",
+      "ingredientes": [
+        {
+          "alimento_id": 78,
+          "cantidad": 80
+        },
+        {
+          "alimento_id": 1,
+          "cantidad": 120
+        },
+        {
+          "alimento_id": 21,
+          "cantidad": 80
+        }
+      ],
+      "macros_totales": {
+        "proteina": 49.92,
+        "carbos": 44.24,
+        "grasas": 15.36
+      },
+      "tiempo_preparacion": "12min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "almuerzo",
+        "viaje"
+      ],
+      "calorias_totales": 528.4
+    },
+    {
+      "id": 49,
+      "nombre": "Gachas de avena con mantequilla de cacahuate",
+      "ingredientes": [
+        {
+          "alimento_id": 19,
+          "cantidad": 80
+        },
+        {
+          "alimento_id": 89,
+          "cantidad": 20
+        },
+        {
+          "alimento_id": 27,
+          "cantidad": 80
+        }
+      ],
+      "macros_totales": {
+        "proteina": 19.4,
+        "carbos": 75.28,
+        "grasas": 15.76
+      },
+      "tiempo_preparacion": "8min",
+      "dificultad": "facil",
+      "ideal_para": [
+        "desayuno",
+        "energia"
+      ],
+      "calorias_totales": 500.0
+    },
+    {
+      "id": 50,
+      "nombre": "Tazón nocturno de chia con leche de almendra y frutas",
+      "ingredientes": [
+        {
+          "alimento_id": 58,
+          "cantidad": 40
+        },
+        {
+          "alimento_id": 74,
+          "cantidad": 200
+        },
+        {
+          "alimento_id": 30,
+          "cantidad": 80
+        }
+      ],
+      "macros_totales": {
+        "proteina": 7.96,
+        "carbos": 23.6,
+        "grasas": 14.92
+      },
+      "tiempo_preparacion": "5min (reposo)",
+      "dificultad": "facil",
+      "ideal_para": [
+        "desayuno",
+        "vegano"
+      ],
+      "calorias_totales": 250.8
+    }
+  ]
+}
