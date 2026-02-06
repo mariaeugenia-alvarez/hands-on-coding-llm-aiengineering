@@ -23,3 +23,9 @@ lambda_package/
 .idea/
 *.swp
 *.swo
+
+# PDFs (contenido con derechos de autor)
+data/knowledge_base/pdfs/
+data/knowledge_base/pdf_sources/
+
+CLASE/

@@ -1,3 +1,28 @@
+# Web & API
 flask==3.0.0
 requests==2.31.0
 python-dotenv==1.0.1
+
+# Anthropic LLM
+anthropic
+
+# LangChain Core (usar versiones compatibles)
+langchain
+langchain-core
+langchain-community
+langchain-anthropic
+langchain-huggingface
+
+# Vector Stores & Embeddings
+faiss-cpu==1.8.0
+sentence-transformers==2.7.0
+
+# ML Dependencies
+torch==2.2.2
+numpy<2  # Necesario para compatibilidad con torch/transformers
+transformers==4.38.1
+
+# Utils
+python-dateutil==2.9.0
+beautifulsoup4  # Para descargar contenido web
+pypdf  # Para procesar archivos PDF
