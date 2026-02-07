@@ -9,7 +9,7 @@ USERS_TABLE = """
 CREATE TABLE IF NOT EXISTS users (
     chat_id TEXT PRIMARY KEY,
     nombre TEXT,
-    estado TEXT DEFAULT 'new_user',  -- 'new_user', 'onboarding', 'weekly_setup', 'active'
+    estado TEXT DEFAULT 'new_user', -- 'new_user', 'onboarding', 'weekly_setup', 'active'
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -21,10 +21,10 @@ CREATE TABLE IF NOT EXISTS user_profiles (
     peso_kg REAL,
     altura_cm REAL,
     edad INTEGER,
-    sexo TEXT,  -- 'M', 'F'
-    objetivo TEXT,  -- 'deficit', 'mantenimiento', 'superavit'
-    porcentaje INTEGER,  -- -30, -20, -10, 0, +10, +15, +20
-    factor_actividad REAL,  -- 1.2, 1.4, 1.6, 1.8, 2.0
+    sexo TEXT, -- 'M', 'F'
+    objetivo TEXT, -- 'deficit', 'mantenimiento', 'superavit'
+    porcentaje INTEGER, -- -30, -20, -10, 0, +10, +15, +20
+    factor_actividad REAL, -- 1.2, 1.4, 1.6, 1.8, 2.0
     calorias_objetivo INTEGER,
     proteina_g INTEGER,
     carbos_g INTEGER,
@@ -39,7 +39,7 @@ CONVERSATION_HISTORY_TABLE = """
 CREATE TABLE IF NOT EXISTS conversation_history (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     chat_id TEXT NOT NULL,
-    role TEXT NOT NULL,  -- 'user', 'assistant'
+    role TEXT NOT NULL, -- 'user', 'assistant'
     content TEXT NOT NULL,
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (chat_id) REFERENCES users(chat_id) ON DELETE CASCADE
@@ -51,9 +51,9 @@ CREATE TABLE IF NOT EXISTS weekly_schedules (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     chat_id TEXT NOT NULL,
     semana_inicio DATE NOT NULL,
-    deportes_json TEXT,  -- JSON: {"lunes": "gym", "miercoles": "running", ...}
-    plan_json TEXT,  -- JSON: plan de menús completo
-    suplementos_json TEXT,  -- JSON: lista de suplementos
+    deportes_json TEXT, -- JSON: {"lunes": "gym", "miercoles": "running", ...}
+    plan_json TEXT, -- JSON: plan de menús completo
+    suplementos_json TEXT, -- JSON: lista de suplementos
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (chat_id) REFERENCES users(chat_id) ON DELETE CASCADE
 );
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS user_revisions (
     chat_id TEXT NOT NULL,
     peso_actual REAL NOT NULL,
     feedback TEXT,
-    ajustes_json TEXT,  -- JSON: cambios recomendados
+    ajustes_json TEXT, -- JSON: cambios recomendados
     fecha_revision TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (chat_id) REFERENCES users(chat_id) ON DELETE CASCADE
 );
@@ -74,8 +74,8 @@ CREATE TABLE IF NOT EXISTS user_revisions (
 ONBOARDING_PROGRESS_TABLE = """
 CREATE TABLE IF NOT EXISTS onboarding_progress (
     chat_id TEXT PRIMARY KEY,
-    current_step TEXT,  -- 'nombre', 'peso', 'altura', 'edad', 'sexo', 'objetivo', 'porcentaje', 'actividad', 'deportes'
-    data_json TEXT,  -- JSON con datos recopilados hasta ahora
+    current_step TEXT, -- 'nombre', 'peso', 'altura', 'edad', 'sexo', 'objetivo', 'porcentaje', 'actividad', 'deportes'
+    data_json TEXT, -- JSON con datos recopilados hasta ahora
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (chat_id) REFERENCES users(chat_id) ON DELETE CASCADE

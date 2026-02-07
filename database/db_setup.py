@@ -38,12 +38,12 @@ def create_tables(db_path: str = DB_PATH) -> None:
         # Crear todas las tablas
         for table_sql in ALL_TABLES:
             cursor.execute(table_sql)
-            print(f"✓ Tabla creada")
+            print(f" Tabla creada")
 
         # Crear índices
         for index_sql in INDEXES:
             cursor.execute(index_sql)
-            print(f"✓ Índice creado")
+            print(f" Índice creado")
 
         conn.commit()
         print(f"\nBase de datos inicializada correctamente en {db_path}")
