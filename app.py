@@ -1,8 +1,8 @@
-"""Servidor Flask"""
+"""Servidor Flask - Nutrition Bot RAG"""
 
 import json
 from flask import Flask, request
-from handlers.message import handle_message
+from handlers.message_orchestrator import handle_message
 
 app = Flask(__name__)
 
@@ -22,6 +22,6 @@ def health():
 
 
 if __name__ == "__main__":
-    print("Servidor: http://localhost:5000/webhook")
-    print("Ejecuta: ngrok http 5000")
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    print("Servidor: http://localhost:5001/webhook")
+    print("Ejecuta: ngrok http 5001")
+    app.run(host="0.0.0.0", port=5001, debug=True)
