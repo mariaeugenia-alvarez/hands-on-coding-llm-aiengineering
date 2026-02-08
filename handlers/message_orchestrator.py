@@ -33,6 +33,8 @@ from services.llm_provider import AnthropicProvider
 from services.agent_service import NutritionAgent
 from utils.formatters import format_welcome
 
+# Longitud máxima de mensaje (previene abuso de tokens y saturación de DB)
+MAX_MESSAGE_LENGTH = 2000
 
 # Inicializar RAG Service (singleton)
 print(" Inicializando RAG Service en Message Orchestrator...")
@@ -63,6 +65,10 @@ def handle_message(update: dict):
 
     if not text:
         return
+
+    # Limitar longitud del mensaje (previene abuso de tokens y saturación)
+    if len(text) > MAX_MESSAGE_LENGTH:
+        text = text[:MAX_MESSAGE_LENGTH]
 
     print(f"\n Mensaje de {chat_id}: {text[:50]}...")
 
