@@ -3,10 +3,12 @@ Message Orchestrator - Cerebro central del bot
 
 Este es el punto de entrada principal que:
 1. Recibe mensajes de Telegram
-2. Determina el estado del usuario
-3. Enruta a: onboarding / weekly_setup / active / commands
-4. Gestiona contexto (RAG + historial + perfil)
-5. Guarda todo en base de datos
+2. Aplica guardrails de entrada (prompt injection, off-topic)
+3. Determina el estado del usuario
+4. Enruta a: onboarding / weekly_setup / active / commands
+5. Gestiona contexto (RAG + historial + perfil)
+6. Aplica guardrails de salida (fuga de datos sensibles)
+7. Guarda todo en base de datos
 """
 
 import os
@@ -26,6 +28,7 @@ from database.db_setup import (
 from handlers.onboarding_handler import OnboardingHandler
 from services.rag_service import RAGService
 from services.llm_service import get_response_with_context
+from services.guardrails_service import validate_input, validate_output, is_off_topic
 from utils.formatters import format_welcome
 
 
@@ -70,6 +73,27 @@ def handle_message(update: dict):
         estado = user['estado']
         print(f" → Estado: {estado}")
 
+        # --- GUARDRAILS: Validacion de entrada ---
+        # Solo aplicar guardrails en estados que usan LLM (no en onboarding ni comandos)
+        if estado in ('weekly_setup', 'active') and not text.startswith('/'):
+            # 1. Detectar prompt injection
+            is_valid, rejection_msg = validate_input(text)
+            if not is_valid:
+                print(f" Guardrail: Input rechazado (prompt injection)")
+                response = rejection_msg
+                save_conversation_message(chat_id, "assistant", response)
+                send_message(chat_id, response)
+                return
+
+            # 2. Detectar off-topic
+            off_topic, redirect_msg = is_off_topic(text)
+            if off_topic:
+                print(f" Guardrail: Input rechazado (off-topic)")
+                response = redirect_msg
+                save_conversation_message(chat_id, "assistant", response)
+                send_message(chat_id, response)
+                return
+
         # Routing según estado
         if estado == 'onboarding':
             response = handle_onboarding(chat_id, text)
@@ -86,6 +110,9 @@ def handle_message(update: dict):
 
         else:
             response = "Estado desconocido. Usa /start para reiniciar."
+
+        # --- GUARDRAILS: Validacion de salida ---
+        response = validate_output(response)
 
         # Guardar respuesta del assistant en DB
         save_conversation_message(chat_id, "assistant", response)
@@ -292,53 +319,3 @@ def should_use_rag(text: str) -> bool:
 
     text_lower = text.lower()
     return any(keyword in text_lower for keyword in rag_keywords)
-
-
-# ============================================================
-# Test
-# ============================================================
-
-if __name__ == "__main__":
-    print("=" * 60)
-    print(" Testing Message Orchestrator")
-    print("=" * 60)
-
-    # Simular update de Telegram
-    test_chat_id = "test_orchestrator_456"
-
-    # Test 1: Usuario nuevo
-    print("\n1. Usuario nuevo (/start):")
-    update = {
-        "message": {
-            "chat": {"id": test_chat_id},
-            "text": "/start"
-        }
-    }
-    # handle_message(update) # Comentado para no enviar a Telegram
-
-    # Verificar que se creó el usuario
-    user = get_user(test_chat_id)
-    if user:
-        print(f" Usuario creado: estado={user['estado']}")
-
-    # Test 2: Pregunta con RAG
-    print("\n2. Pregunta con RAG:")
-    should_rag = should_use_rag("Como calculo mis proteinas?")
-    print(f" Should use RAG: {should_rag}")
-
-    # Test 3: Pregunta sin RAG
-    print("\n3. Pregunta sin RAG:")
-    should_rag = should_use_rag("Hola como estas?")
-    print(f" Should use RAG: {should_rag}")
-
-    # Cleanup
-    from database.db_setup import get_db_connection
-    conn = get_db_connection()
-    conn.execute("DELETE FROM conversation_history WHERE chat_id = ?", (test_chat_id,))
-    conn.execute("DELETE FROM users WHERE chat_id = ?", (test_chat_id,))
-    conn.commit()
-    conn.close()
-
-    print("\n" + "=" * 60)
-    print(" Test completado")
-    print("=" * 60)
