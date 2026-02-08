@@ -1,0 +1,102 @@
+[
+  {
+    "question": "¿Cuál es la fórmula base para calcular las calorías de mantenimiento con el método de constante directa?",
+    "ground_truth": "La fórmula base es: Calorías de mantenimiento = Kg × 22 × FA, donde Kg son los kilogramos en ayunas, 22 es una constante fija y FA es el factor de actividad."
+  },
+  {
+    "question": "¿Qué factor de actividad corresponde a una persona que hace ejercicio moderado 3-5 días a la semana?",
+    "ground_truth": "El factor de actividad para ejercicio moderado (3-5 días) es 1.6."
+  },
+  {
+    "question": "¿Cuánta proteína por kilogramo de peso se recomienda en una dieta de déficit calórico?",
+    "ground_truth": "En pérdida de grasa se recomienda hasta 2.5 g/kg de proteína, siendo el mínimo 1.8 g/kg."
+  },
+  {
+    "question": "¿Cuál es la fórmula de Harris-Benedict para calcular el metabolismo basal en hombres?",
+    "ground_truth": "La fórmula de Harris-Benedict para hombres es: BMR = 66.473 + (13.7516 × peso en kg) + (5.0033 × altura en cm) - (6.755 × edad en años)."
+  },
+  {
+    "question": "Si una persona pesa 82.5 kg con factor de actividad 1.6 y quiere un déficit del 10%, ¿cuántas calorías diarias debería consumir?",
+    "ground_truth": "Las calorías de mantenimiento serían 82.5 × 22 × 1.6 = 2904 kcal. Con un déficit del 10%: 2904 - 290 = 2614 kcal diarias."
+  },
+  {
+    "question": "¿Cuántas kcal aporta un gramo de grasa?",
+    "ground_truth": "Un gramo de grasa aporta 9 kcal."
+  },
+  {
+    "question": "¿Qué porcentaje de déficit calórico se recomienda para bajar de peso de forma lenta conservando masa muscular?",
+    "ground_truth": "Se recomienda un déficit del -10% para bajar de forma lenta conservando masa muscular."
+  },
+  {
+    "question": "¿Cuál es la dosis de mantenimiento recomendada de creatina monohidrato?",
+    "ground_truth": "La dosis de mantenimiento recomendada es de 3-5 g al día. La recomendación general es tomar 5g diarios, o para más precisión 0.08g por kilo de peso."
+  },
+  {
+    "question": "¿Para qué tipo de deportes está especialmente indicada la creatina?",
+    "ground_truth": "La creatina está especialmente indicada para ejercicios de fuerza como gym, weightlifting y crossfit, así como deportes explosivos como sprints, saltos y artes marciales."
+  },
+  {
+    "question": "¿Es cierto que la creatina daña los riñones?",
+    "ground_truth": "No, es un mito. En personas sanas no hay evidencia de daño renal por suplementación con creatina. Múltiples estudios confirman su seguridad. Solo personas con enfermedad renal preexistente deben tener precaución."
+  },
+  {
+    "question": "¿Cuál es la dosis recomendada de cafeína como pre-entreno y cuándo tomarla?",
+    "ground_truth": "La dosis recomendada es de 3-6 mg por kg de peso corporal. Por ejemplo, una persona de 70 kg debería tomar entre 210 y 420 mg. Debe tomarse 30-60 minutos antes del entrenamiento."
+  },
+  {
+    "question": "¿Por qué no se debe tomar cafeína después de las 16:00h?",
+    "ground_truth": "Porque la cafeína afecta al sueño. Su vida media varía entre 4 y 9 horas, lo que significa que si se toma tarde, a medianoche todavía habrá una cantidad significativa de cafeína en el organismo."
+  },
+  {
+    "question": "¿Cuánta proteína whey se recomienda por toma y cómo se calcula de forma personalizada?",
+    "ground_truth": "Se recomienda 20-40g por toma como dosis general. El cálculo personalizado es 0.3-0.4g por kg de peso corporal. Por ejemplo, una persona de 75 kg tomaría 22-30g por toma."
+  },
+  {
+    "question": "¿Cuál es el timing óptimo para tomar proteína whey post-entrenamiento?",
+    "ground_truth": "El timing óptimo es dentro de los 30-60 minutos después del entrenamiento. Sin embargo, lo más importante es la ingesta total de proteína durante el día, ya que la ventana anabólica dura varias horas."
+  },
+  {
+    "question": "¿Qué dosis de Omega-3 se recomienda para personas en déficit calórico o mayores de 35 años?",
+    "ground_truth": "Para personas en déficit calórico o mayores de 35 años se recomienda 2-3g de EPA+DHA combinados al día."
+  },
+  {
+    "question": "¿Cuándo se recomienda suplementar con Vitamina D3 y a qué dosis?",
+    "ground_truth": "Se recomienda para mayores de 30 años, personas con poca exposición solar, entrenamientos indoor y en invierno. La dosis general es de 2000-4000 UI al día, tomándola con una comida que contenga grasas para mejorar su absorción."
+  },
+  {
+    "question": "¿Es realmente necesario tomar BCAAs si ya consumes suficiente proteína?",
+    "ground_truth": "No. Si ya consumes suficiente proteína, los BCAAs no aportan beneficio adicional. Su utilidad se limita a entrenamientos en ayunas. Es un mito que los BCAAs son esenciales."
+  },
+  {
+    "question": "¿Qué suplementos se recomiendan en un stack para déficit calórico?",
+    "ground_truth": "Para déficit calórico se recomienda: 1) Proteína Whey (1-2 tomas/día), 2) Omega-3 (2-3g/día), 3) Vitamina D (2000-4000 UI/día), 4) Cafeína como pre-entreno (opcional), y 5) Creatina (3-5g/día si haces fuerza)."
+  },
+  {
+    "question": "¿Qué ratio de proteína a carbohidrato se recomienda en una comida post-entrenamiento?",
+    "ground_truth": "El ratio proteína:carbohidrato recomendado en una comida post-entreno se mueve entre 1:1 y 1:3, dependiendo de la intensidad y duración de la actividad física. La proteína debería estar entre 20 y 40 gramos."
+  },
+  {
+    "question": "¿Por qué la leche entera es mejor que la desnatada después de entrenar?",
+    "ground_truth": "La leche entera produce mayor captación de aminoácidos y mayor síntesis de proteína que la desnatada, incluso cuando se igualan calorías y se duplica la proteína de la leche desnatada. Los compuestos no proteicos de la leche entera potencian las señales anabólicas."
+  },
+  {
+    "question": "¿Qué es el disparador de leucina y por qué es importante para la síntesis muscular?",
+    "ground_truth": "El disparador de leucina (leucine trigger) es el umbral mínimo de leucina que debe alcanzarse para iniciar la síntesis de proteína muscular, activando la vía mTOR. Este umbral se reduce al entrenar (el músculo acepta aminoácidos con más facilidad) y se eleva al envejecer (resistencia anabólica)."
+  },
+  {
+    "question": "¿Cuáles son los beneficios cognitivos de la creatina?",
+    "ground_truth": "La creatina mejora la capacidad cognitiva y la memoria, especialmente en personas mayores. También mejora el estado de ánimo en casos de fatiga mental por falta de sueño y reduce síntomas de depresión."
+  },
+  {
+    "question": "¿La cafeína interfiere con los beneficios de la creatina?",
+    "ground_truth": "Un estudio antiguo parecía indicar que sí, pero estudios más recientes no han replicado ese efecto. Incluso hay estudios que muestran que la cafeína potencia el efecto de la creatina. La recomendación es tomar la cafeína antes del entrenamiento y la creatina después."
+  },
+  {
+    "question": "¿Cuántas grasas por kilogramo se recomiendan en una dieta de pérdida de grasa?",
+    "ground_truth": "En una dieta de pérdida de grasa se recomienda un mínimo de 0.5 g/kg de grasas."
+  },
+  {
+    "question": "¿Qué porcentaje de superávit calórico se recomienda para una persona ectomorfa con dificultad para subir de peso?",
+    "ground_truth": "Para personas con dificultad para subir de peso (ectomorfos) se recomienda un superávit del +20%, aunque se debe tener cuidado para no subir exceso de grasa."
+  }
+]

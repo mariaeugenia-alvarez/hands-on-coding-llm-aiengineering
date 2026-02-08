@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-02-06T17:00:17.019767",
+  "timestamp": "2026-02-08T16:10:08.560605",
   "embeddings_provider": "huggingface",
-  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
   "chunk_size": 1000,
   "chunk_overlap": 200,
   "total_chunks": 990,
@@ -9,13 +9,13 @@
   "documents": [
     "guia_macros.md",
     "guia_suplementos.md",
-    "ejemplos menu.md",
-    "diestas varias.md",
-    "dieta cetogenica.md",
-    "Cafeína:_Rendimiento,_Quema_de_Grasa,_Dosis,_Momen.md",
-    "Lo_que_siempre_quisiste_saber_sobre_la_proteína_de.md",
-    "Creatina,_uno_de_los_mejores_suplementos._Benefici.md",
-    "Comida_Real_Después_de_Entrenar,_con_Ejemplos.md",
-    "Triaje_de_nutrientes,_deficiencias_y_riesgos_de_la.md"
+    "pdf_sources/ejemplos menu.md",
+    "pdf_sources/diestas varias.md",
+    "pdf_sources/dieta cetogenica.md",
+    "web_sources/Cafeína:_Rendimiento,_Quema_de_Grasa,_Dosis,_Momen.md",
+    "web_sources/Lo_que_siempre_quisiste_saber_sobre_la_proteína_de.md",
+    "web_sources/Creatina,_uno_de_los_mejores_suplementos._Benefici.md",
+    "web_sources/Comida_Real_Después_de_Entrenar,_con_Ejemplos.md",
+    "web_sources/Triaje_de_nutrientes,_deficiencias_y_riesgos_de_la.md"
   ]
 }

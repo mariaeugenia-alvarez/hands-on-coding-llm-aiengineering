@@ -1,0 +1,214 @@
+{
+    "metrics": {
+    "faithfulness": 0.6707,
+    "answer_relevancy": 0.8476,
+    "context_precision": 0.7733,
+    "context_recall": 0.6827,
+    "answer_correctness": 0.5167
+  },
+  "num_questions": 25,
+  "model_evaluated": "claude-3-5-haiku-20241022",
+  "embeddings_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "detail": [
+    {
+      "question": "¿Cuál es la fórmula base para calcular las calorías de mantenimiento con el método de constante directa?",
+      "faithfulness": 0.9091,
+      "answer_relevancy": 0.954,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "answer_correctness": 0.5355
+    },
+    {
+      "question": "¿Qué factor de actividad corresponde a una persona que hace ejercicio moderado 3-5 días a la semana?",
+      "faithfulness": 0.6667,
+      "answer_relevancy": 0.881,
+      "context_precision": 1.0,
+      "context_recall": 0.0,
+      "answer_correctness": 0.6868
+    },
+    {
+      "question": "¿Cuánta proteína por kilogramo de peso se recomienda en una dieta de déficit calórico?",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.9441,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "answer_correctness": 0.4686
+    },
+    {
+      "question": "¿Cuál es la fórmula de Harris-Benedict para calcular el metabolismo basal en hombres?",
+      "faithfulness": 0.6667,
+      "answer_relevancy": 0.7163,
+      "context_precision": 0.0,
+      "context_recall": 0.0,
+      "answer_correctness": 0.2772
+    },
+    {
+      "question": "Si una persona pesa 82.5 kg con factor de actividad 1.6 y quiere un déficit del 10%, ¿cuántas calorías diarias debería consumir?",
+      "faithfulness": 0.3636,
+      "answer_relevancy": 0.84,
+      "context_precision": 1.0,
+      "context_recall": 0.5,
+      "answer_correctness": 0.4088
+    },
+    {
+      "question": "¿Cuántas kcal aporta un gramo de grasa?",
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.8424,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "answer_correctness": 0.593
+    },
+    {
+      "question": "¿Qué porcentaje de déficit calórico se recomienda para bajar de peso de forma lenta conservando masa muscular?",
+      "faithfulness": 0.4615,
+      "answer_relevancy": 0.874,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "answer_correctness": 0.5135
+    },
+    {
+      "question": "¿Cuál es la dosis de mantenimiento recomendada de creatina monohidrato?",
+      "faithfulness": 0.8889,
+      "answer_relevancy": 0.9631,
+      "context_precision": 1.0,
+      "context_recall": 0.5,
+      "answer_correctness": 0.4927
+    },
+    {
+      "question": "¿Para qué tipo de deportes está especialmente indicada la creatina?",
+      "faithfulness": 0.5217,
+      "answer_relevancy": 0.8882,
+      "context_precision": 0.3333,
+      "context_recall": 1.0,
+      "answer_correctness": 0.484
+    },
+    {
+      "question": "¿Es cierto que la creatina daña los riñones?",
+      "faithfulness": 0.6154,
+      "answer_relevancy": 0.8339,
+      "context_precision": 0.5833,
+      "context_recall": 0.5,
+      "answer_correctness": 0.6044
+    },
+    {
+      "question": "¿Cuál es la dosis recomendada de cafeína como pre-entreno y cuándo tomarla?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8521,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "answer_correctness": 0.3907
+    },
+    {
+      "question": "¿Por qué no se debe tomar cafeína después de las 16:00h?",
+      "faithfulness": 0.5455,
+      "answer_relevancy": 0.9176,
+      "context_precision": 0.5833,
+      "context_recall": 1.0,
+      "answer_correctness": 0.6503
+    },
+    {
+      "question": "¿Cuánta proteína whey se recomienda por toma y cómo se calcula de forma personalizada?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8566,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "answer_correctness": 0.4943
+    },
+    {
+      "question": "¿Cuál es el timing óptimo para tomar proteína whey post-entrenamiento?",
+      "faithfulness": 0.9231,
+      "answer_relevancy": 0.9428,
+      "context_precision": 1.0,
+      "context_recall": 0.5,
+      "answer_correctness": 0.3338
+    },
+    {
+      "question": "¿Qué dosis de Omega-3 se recomienda para personas en déficit calórico o mayores de 35 años?",
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.8879,
+      "context_precision": 0.0,
+      "context_recall": 0.0,
+      "answer_correctness": 0.424
+    },
+    {
+      "question": "¿Cuándo se recomienda suplementar con Vitamina D3 y a qué dosis?",
+      "faithfulness": 0.9333,
+      "answer_relevancy": 0.9053,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "answer_correctness": 0.6044
+    },
+    {
+      "question": "¿Es realmente necesario tomar BCAAs si ya consumes suficiente proteína?",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.9304,
+      "context_precision": 1.0,
+      "context_recall": 0.6667,
+      "answer_correctness": 0.4926
+    },
+    {
+      "question": "¿Qué suplementos se recomiendan en un stack para déficit calórico?",
+      "faithfulness": 0.5385,
+      "answer_relevancy": 0.8577,
+      "context_precision": 0.0,
+      "context_recall": 0.4,
+      "answer_correctness": 0.3743
+    },
+    {
+      "question": "¿Qué ratio de proteína a carbohidrato se recomienda en una comida post-entrenamiento?",
+      "faithfulness": 0.625,
+      "answer_relevancy": 0.9372,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "answer_correctness": 0.6316
+    },
+    {
+      "question": "¿Por qué la leche entera es mejor que la desnatada después de entrenar?",
+      "faithfulness": 0.6667,
+      "answer_relevancy": 0.9604,
+      "context_precision": 1.0,
+      "context_recall": 0.5,
+      "answer_correctness": 0.8173
+    },
+    {
+      "question": "¿Qué es el disparador de leucina y por qué es importante para la síntesis muscular?",
+      "faithfulness": 0.6429,
+      "answer_relevancy": 0.7504,
+      "context_precision": 1.0,
+      "context_recall": 0.5,
+      "answer_correctness": 0.5061
+    },
+    {
+      "question": "¿Cuáles son los beneficios cognitivos de la creatina?",
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.9614,
+      "context_precision": 0.8333,
+      "context_recall": 1.0,
+      "answer_correctness": 0.7104
+    },
+    {
+      "question": "¿La cafeína interfiere con los beneficios de la creatina?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8695,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "answer_correctness": 0.6354
+    },
+    {
+      "question": "¿Cuántas grasas por kilogramo se recomiendan en una dieta de pérdida de grasa?",
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0,
+      "answer_correctness": 0.2979
+    },
+    {
+      "question": "¿Qué porcentaje de superávit calórico se recomienda para una persona ectomorfa con dificultad para subir de peso?",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.823,
+      "context_precision": 1.0,
+      "context_recall": 1.0,
+      "answer_correctness": 0.4905
+    }
+  ]
+}
