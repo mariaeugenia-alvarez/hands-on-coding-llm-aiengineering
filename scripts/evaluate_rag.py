@@ -29,7 +29,7 @@ from ragas import evaluate
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning, module="ragas")
 
-from ragas.metrics import (
+from ragas.metrics.collections import (
     faithfulness,
     answer_relevancy,
     context_precision,
