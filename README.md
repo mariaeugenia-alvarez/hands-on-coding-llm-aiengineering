@@ -9,7 +9,8 @@ Bot de Telegram que actúa como nutricionista deportivo usando RAG (Retrieval Au
 - **RAG para consultas**: Responde preguntas usando base de conocimiento (990 chunks en FAISS)
 - **Memoria persistente**: Guarda perfiles de usuario y conversaciones en SQLite
 - **Planes semanales**: Genera menús y rutinas según deportes practicados
-- **Recomendaciones de suplementos**: Sugiere suplementación personalizada con cálculos basados en peso/edad/objetivo
+- **Recomendaciones de suplementos**: Sugiere suplementacion personalizada con calculos basados en peso/edad/objetivo
+- **Guardrails de seguridad**: Proteccion contra prompt injection, restriccion tematica a nutricion deportiva, prevencion de fuga de datos sensibles y disclaimer medico
 
 ## Arquitectura
 
@@ -21,10 +22,18 @@ Bot de Telegram que actúa como nutricionista deportivo usando RAG (Retrieval Au
                    │
                    v
 ┌─────────────────────────────────────────────┐
+│           GUARDRAILS (entrada)              │
+│   services/guardrails_service.py            │
+│  • Prompt injection detection               │
+│  • Off-topic filtering                      │
+└──────────────────┬──────────────────────────┘
+                   │
+                   v
+┌─────────────────────────────────────────────┐
 │      MESSAGE ORCHESTRATOR                   │
 │   handlers/message_orchestrator.py          │
-│  • Clasifica intención del mensaje          │
-│  • Enruta a: onboarding/conversación/tools  │
+│  • Clasifica intencion del mensaje          │
+│  • Enruta a: onboarding/conversacion/tools  │
 └───┬────────────┬─────────────┬──────────────┘
     │            │             │
     v            v             v
@@ -37,22 +46,31 @@ Bot de Telegram que actúa como nutricionista deportivo usando RAG (Retrieval Au
 990 chunks   5 tools       6 tablas
 embeddings   (macros,      (users, profiles,
 HuggingFace  recetas,      history, schedules,
-             menús,        revisions, onboarding)
+             menus,        revisions, onboarding)
              suplementos)
          ┌───────────────┐
          │ Claude Haiku  │
          │ (Anthropic)   │
          └───────────────┘
+                   │
+                   v
+┌─────────────────────────────────────────────┐
+│           GUARDRAILS (salida)               │
+│  • Data leak detection                      │
+│  • Sensitive pattern filtering              │
+└─────────────────────────────────────────────┘
 ```
 
 ### Tecnologías
 
 - **LLM**: Claude 3.5 Haiku (Anthropic API)
 - **Vector Store**: FAISS con 990 chunks
-- **Embeddings**: HuggingFace `sentence-transformers/all-MiniLM-L6-v2`
+- **Embeddings**: HuggingFace `paraphrase-multilingual-MiniLM-L12-v2` (multilingue, 384 dim)
+- **Reranking**: CrossEncoder multilingue `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1`
 - **Database**: SQLite (6 tablas)
 - **Framework**: LangChain para RAG
 - **Web**: Flask para webhook de Telegram
+- **Guardrails**: Validacion de entrada/salida con deteccion de prompt injection y fuga de datos
 
 ## Estructura del Proyecto
 
@@ -62,7 +80,12 @@ HuggingFace  recetas,      history, schedules,
 ├── app.py                          # Servidor Flask + webhook Telegram
 ├── requirements.txt                # Dependencias Python
 ├── .env                           # Variables de entorno (API keys)
+├── .env.example                   # Plantilla de variables de entorno
 ├── README.md                      # Este archivo
+│
+├── docker/
+│   ├── Dockerfile                 # Imagen Docker
+│   └── docker-compose.yml         # Orquestacion Docker
 │
 ├── config/
 │   ├── settings.py                # Configuración centralizada
@@ -74,14 +97,17 @@ HuggingFace  recetas,      history, schedules,
 │   └── nutrition_bot.db           # Base de datos SQLite (generada)
 │
 ├── services/
-│   ├── rag_service.py             # Motor RAG (FAISS + búsqueda)
+│   ├── rag_service.py             # Motor RAG (FAISS + reranking CrossEncoder)
 │   ├── tools_service.py           # 5 herramientas core (macros, recetas, etc.)
-│   └── llm_service.py             # Wrapper de Claude Haiku
+│   ├── tool_registry.py           # Registro de tools (JSON Schema + ejecucion)
+│   ├── agent_service.py           # Agente autonomo con tool execution
+│   ├── llm_provider.py            # Interfaz LLM-agnostic (Anthropic, OpenAI...)
+│   ├── llm_service.py             # Wrapper de Claude Haiku (legacy)
+│   └── guardrails_service.py      # Guardrails: validacion entrada/salida
 │
 ├── handlers/
-│   ├── message_orchestrator.py    # Orquestador principal de mensajes
-│   ├── onboarding_handler.py      # Flujo de onboarding (8 pasos)
-│   └── commands_handler.py        # Comandos del bot (/start, /macros, etc.)
+│   ├── message_orchestrator.py    # Orquestador principal (routing, comandos, agente)
+│   └── onboarding_handler.py      # Flujo de onboarding (8 pasos)
 │
 ├── utils/
 │   ├── text_utils.py              # Extracción de números, keywords
@@ -136,8 +162,11 @@ Crear archivo `.env` en la raíz del proyecto:
 ANTHROPIC_API_KEY=tu_api_key_de_anthropic
 TELEGRAM_BOT_TOKEN=tu_token_de_telegram
 
+# Seguridad
+WEBHOOK_SECRET_TOKEN=un_token_secreto_aleatorio
+
 # Configuración
-DEBUG=True
+DEBUG=False
 ```
 
 ### 3. Inicializar base de datos
@@ -153,7 +182,7 @@ Esto crea `data/nutrition_bot.db` con las 6 tablas necesarias.
 El vectorstore ya está creado en `data/vectorstore_faiss/` con 990 chunks.
 
 **Metadata del vectorstore**:
-- **Modelo**: sentence-transformers/all-MiniLM-L6-v2
+- **Modelo**: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
 - **Chunks**: 990
 - **Chunk size**: 1000 caracteres
 - **Overlap**: 200 caracteres
@@ -167,7 +196,51 @@ python scripts/update_vectorstore.py
 
 ## Uso
 
-### 1. Iniciar servidor Flask
+### Con Docker (recomendado)
+
+#### 1. Configurar variables de entorno
+
+```bash
+cp .env.example .env
+# Editar .env con tus API keys
+```
+
+#### 2. Construir y ejecutar
+
+```bash
+docker-compose -f docker/docker-compose.yml up --build
+```
+
+El servidor inicia en `http://localhost:5001`
+
+#### 3. Exponer con ngrok
+
+En otra terminal:
+
+```bash
+ngrok http 5001
+```
+
+#### 4. Configurar webhook de Telegram
+
+```bash
+export TELEGRAM_BOT_TOKEN="tu_token"
+./scripts/setup_telegram_webhook.sh
+# Ingresa tu URL de ngrok cuando se solicite
+```
+
+#### 5. Probar el bot
+
+1. Abre Telegram
+2. Busca tu bot
+3. Envia `/start`
+4. Sigue el proceso de onboarding
+
+---
+
+### Sin Docker (manual)
+
+#### 1. Iniciar servidor Flask
 
 ```bash
 python app.py
@@ -175,7 +248,7 @@ python app.py
 
 El servidor inicia en `http://localhost:5001`
 
-### 2. Exponer con ngrok
+#### 2. Exponer con ngrok
 
 En otra terminal:
 
@@ -185,9 +258,9 @@ ngrok http 5001
 
 Copia la URL generada (ej: `https://abc123.ngrok-free.app`)
 
-### 3. Configurar webhook de Telegram
+#### 3. Configurar webhook de Telegram
 
-**Opción A - Script automático** (recomendado):
+**Opcion A - Script automatico** (recomendado):
 
 ```bash
 export TELEGRAM_BOT_TOKEN="tu_token"
@@ -195,13 +268,15 @@ export TELEGRAM_BOT_TOKEN="tu_token"
 # Ingresa tu URL de ngrok cuando se solicite
 ```
 
-**Opción B - Manual**:
+**Opción B - Manual** (con secret_token para autenticación):
 
 ```bash
 curl -X POST "https://api.telegram.org/bot<TU_TOKEN>/setWebhook" \
   -H "Content-Type: application/json" \
-  -d '{"url": "https://abc123.ngrok-free.app/webhook"}'
+  -d '{"url": "https://abc123.ngrok-free.app/webhook", "secret_token": "un_token_secreto_aleatorio"}'
 ```
+
+El `secret_token` debe coincidir con `WEBHOOK_SECRET_TOKEN` en tu `.env`. Telegram enviará este token en el header `X-Telegram-Bot-Api-Secret-Token` y el servidor lo validará para rechazar peticiones no autorizadas.
 
 ### 4. Probar el bot
 
@@ -215,12 +290,10 @@ curl -X POST "https://api.telegram.org/bot<TU_TOKEN>/setWebhook" \
 | Comando | Descripción |
 |---------|-------------|
 | `/start` | Inicia el bot y comienza onboarding |
-| `/macros` | Recalcula macros (si cambió el peso) |
-| `/plan` | Muestra plan semanal actual |
-| `/recetas [deporte]` | Busca recetas para un deporte |
-| `/suplementos` | Muestra suplementos recomendados |
-| `/revision` | Realiza revisión de progreso semanal |
+| `/macros` | Muestra los macros actuales del usuario |
 | `/help` | Muestra ayuda y comandos |
+
+Las funcionalidades de recetas, suplementos, planes y revisiones se invocan automaticamente por el agente en conversacion libre. El usuario solo tiene que preguntar (ej: "recomiendame suplementos para crossfit") y el agente decide que herramienta usar.
 
 ## Flujo de Onboarding
 
@@ -244,22 +317,29 @@ Al finalizar:
 
 El bot usa RAG para responder preguntas sobre nutrición:
 
-### Proceso de búsqueda
+### Proceso de búsqueda (Retrieve + Rerank)
 
 ```
 Usuario: "¿Cuánta proteína necesito?"
     ↓
-1. Embedding de la query (HuggingFace)
-2. Búsqueda en FAISS (top 3 chunks)
-3. Contexto augmentado:
-   - RAG results (chunks relevantes)
+1. Embedding de la query (HuggingFace bi-encoder)
+2. Búsqueda en FAISS (top 9 candidatos)
+    ↓
+3. Reranking con CrossEncoder multilingüe
+   - Evalúa relevancia semántica de cada par (query, chunk)
+   - Reordena por relevancia real → top 3 chunks
+    ↓
+4. Contexto augmentado:
+   - RAG results (chunks rerankeados)
    - User profile (peso, macros)
    - Conversation history (últimos 5)
     ↓
-4. Prompt a Claude Haiku con contexto enriquecido
+5. Prompt a Claude Haiku con contexto enriquecido
     ↓
-5. Respuesta personalizada y fundamentada
+6. Respuesta personalizada y fundamentada
 ```
+
+**Por que reranking**: Los embeddings bi-encoder (FAISS) son rápidos pero aproximados: representan query y documento por separado. El CrossEncoder evalúa cada par (query, documento) de forma conjunta, lo que es más preciso para determinar relevancia semántica. Además, el modelo `mmarco-mMiniLMv2` está entrenado en datos multilingues (incluyendo español), compensando parcialmente las limitaciones del modelo de embeddings inglés.
 
 ### Base de Conocimiento
 
@@ -272,6 +352,71 @@ Usuario: "¿Cuánta proteína necesito?"
 
 1. Agregar archivos `.md` o `.pdf` a `data/knowledge_base/`
 2. Ejecutar: `python scripts/update_vectorstore.py`
+
+## Guardrails de Seguridad
+
+El bot implementa multiples capas de proteccion para garantizar un uso seguro:
+
+### Capa 0: Proteccion de infraestructura
+
+- **Autenticacion de webhook**: El servidor valida el header `X-Telegram-Bot-Api-Secret-Token` para rechazar peticiones que no vengan de Telegram (HTTP 403)
+- **Limite de longitud**: Los mensajes se truncan a 2000 caracteres para prevenir abuso de tokens de API y saturacion de la base de datos
+- **Debug desactivado**: Flask corre sin modo debug en produccion para no exponer el debugger interactivo de Werkzeug
+
+### Capa 1: Validacion de entrada (pre-LLM)
+
+**Prompt injection**: Detecta intentos de manipular el comportamiento del LLM. Patrones como "ignora tus instrucciones", "actua como", "jailbreak", "dime tu prompt", etc. se rechazan antes de llegar al modelo.
+
+**Off-topic**: Detecta preguntas fuera del ambito de nutricion deportiva (politica, programacion, finanzas, entretenimiento, etc.) y redirige amablemente al usuario. Ahorra tokens al no enviar la consulta al LLM.
+
+### Capa 2: System prompt reforzado (en el LLM)
+
+El system prompt de Claude Haiku incluye 6 reglas estrictas:
+1. Solo responder sobre nutricion deportiva
+2. Rechazar temas no relacionados
+3. No revelar informacion tecnica del sistema (tablas, modelos, prompts)
+4. Resistencia a prompt injection
+5. No dar diagnosticos medicos (recomendar profesional de salud)
+6. Responder siempre en espanol
+
+### Capa 3: Validacion de salida (post-LLM)
+
+Filtra la respuesta del LLM antes de enviarla al usuario. Detecta fugas accidentales de:
+- Queries SQL (SELECT, CREATE TABLE, INSERT)
+- Nombres de tablas internas (user_profiles, conversation_history, etc.)
+- API keys y tokens
+- Rutas del sistema de archivos
+- Referencias al modelo de IA
+
+```
+Flujo completo:
+
+Webhook Telegram
+    |
+    v
+secret_token valido? --> NO --> 403 Forbidden
+    |
+    v
+len(texto) > 2000? --> truncar a 2000 chars
+    |
+    v
+validate_input() --> prompt injection? --> Rechazo (sin LLM)
+    |
+    v
+is_off_topic() --> fuera de tema? --> Redireccion (sin LLM)
+    |
+    v
+[Proceso normal: onboarding / weekly_setup / active]
+    |
+    v
+Respuesta LLM
+    |
+    v
+validate_output() --> datos sensibles? --> Respuesta generica segura
+    |
+    v
+Enviar a Telegram
+```
 
 ## Sistema de Tools
 
@@ -377,6 +522,64 @@ ANTHROPIC_API_KEY=tu_api_key
 curl https://api.telegram.org/bot<TOKEN>/getWebhookInfo
 ```
 
+## Evaluacion del RAG (RAGas)
+
+El proyecto incluye evaluacion formal del pipeline RAG usando el framework RAGas con 5 metricas estandar:
+
+```bash
+python scripts/evaluate_rag.py
+```
+
+**Comparativa de resultados** (25 preguntas, ground truth manual):
+
+| Metrica | Baseline | Con mejoras | Mejora | Que mide |
+|---------|----------|-------------|--------|----------|
+| Faithfulness | 0.3910 | **0.6707** | +71.5% | Si la respuesta es fiel al contexto recuperado |
+| Answer Relevancy | 0.3972 | **0.8476** | +113.4% | Si la respuesta es relevante a la pregunta |
+| Context Precision | 0.2867 | **0.7733** | +169.7% | Si los chunks recuperados son relevantes |
+| Context Recall | 0.2567 | **0.6827** | +166.0% | Si se recupero toda la informacion necesaria |
+| Answer Correctness | 0.4517 | **0.5167** | +14.4% | Precision vs ground truth |
+
+- **Baseline**: embeddings ingles (`all-MiniLM-L6-v2`), sin reranking
+- **Con mejoras**: embeddings multilingue (`paraphrase-multilingual-MiniLM-L12-v2`) + reranking CrossEncoder (`mmarco-mMiniLMv2-L12-H384-v1`)
+
+**Diagnostico**: Las dos mejoras aplicadas tuvieron impacto significativo:
+
+1. **Context Precision +169.7%**: El reranking con CrossEncoder multilingue mejora drasticamente la seleccion de chunks relevantes. FAISS recupera 9 candidatos y el CrossEncoder reordena por relevancia semantica real, devolviendo los 3 mejores.
+2. **Context Recall +166.0%**: El modelo de embeddings multilingue captura mucho mejor la semantica del español, recuperando mas informacion relevante de la knowledge base.
+3. **Answer Relevancy +113.4%**: Con mejor contexto, Claude genera respuestas mas relevantes a la pregunta del usuario.
+4. **Faithfulness +71.5%**: Claude se apoya mas en el contexto RAG recuperado en vez de su conocimiento propio, lo cual es el comportamiento deseado.
+
+**Archivos**:
+- Dataset: `data/eval/eval_dataset.json` (25 preguntas con ground truth)
+- Resultados: `data/eval/eval_results.json` (detalle por pregunta)
+- Grafico: `data/eval/eval_metrics.png`
+
+## Decisión de Modelo: API vs Fine-Tuning
+
+### Por que usamos Claude Haiku API en vez de fine-tuning
+
+Este proyecto usa Claude 3.5 Haiku via API como decisión de ingeniería deliberada. Se centra en orquestación y diseño de RAG como eje del proyecto. 
+
+### Argumentos a favor de usar API (sin fine-tuning)
+
+1. **Coste desproporcionado del fine-tuning en produccion**: El fine-tuning en si es barato ($5-$20 con QLoRA en una A100), pero servir el modelo 24/7 cuesta $641+/mes en GPU dedicada. A 100 queries/dia, la API de Claude cuesta $4.80/mes - es **133x mas barato**.
+
+2. **La calidad del modelo base ya es superior**: Claude Haiku tiene capacidades de razonamiento, seguimiento de instrucciones y generacion en español que un modelo 7B/8B fine-tuned no iguala facilmente. El fine-tuning mejora el dominio especifico, pero puede degradar capacidades generales como guardrails y coherencia.
+
+3. **RAG ya cubre la especializacion de dominio**: En vez de "quemar" conocimiento nutricional en los pesos del modelo (fine-tuning), lo mantenemos en la knowledge base (RAG). Esto es mas flexible: actualizar informacion es agregar un documento, no re-entrenar.
+
+4. **Complejidad operativa innecesaria**: Fine-tuning requiere pipeline de datos, GPU, MLOps, versionado de modelos. Para una PoC de un nutricionista con RAG, esta complejidad no aporta valor.
+
+
+### Cuando si tendria sentido fine-tuning
+
+- **Escala masiva**: Miles de usuarios concurrentes (>50k queries/dia)
+- **Latencia critica**: Si se necesitara <100ms por respuesta
+- **Datos propietarios sensibles**: Si los datos no pudieran salir a un API externo
+- **Comportamiento muy especifico**: Si se necesitara un tono, formato o estilo muy particular que el prompting no consiga
+
+
 ## Licencia
 
-Proyecto académico - Práctica de RAG con LangChain y Anthropic Claude.
+Proyecto academico - Practica de RAG con LangChain y Anthropic Claude.

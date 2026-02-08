@@ -1,7 +1,5 @@
-# Python
 __pycache__/
 *.py[cod]
-*$py.class
 *.so
 .Python
 env/
@@ -10,22 +8,20 @@ venv/
 ENV/
 *.egg-info/
 
-# Lambda package
-lambda_package/
-*.zip
-
-# Environment variables
 .env
 .env.local
-
-# IDE
+.git/
+.gitignore
 .vscode/
 .idea/
-*.swp
-*.swo
 
-# PDFs (contenido con derechos de autor)
+CLASE/
+test/
+*.md
+!data/knowledge_base/**/*.md
+
 data/knowledge_base/pdfs/
 data/knowledge_base/pdf_sources/
 
-
+docker/
+.dockerignore
