@@ -29,6 +29,8 @@ from handlers.onboarding_handler import OnboardingHandler
 from services.rag_service import RAGService
 from services.llm_service import get_response_with_context
 from services.guardrails_service import validate_input, validate_output, is_off_topic
+from services.llm_provider import AnthropicProvider
+from services.agent_service import NutritionAgent
 from utils.formatters import format_welcome
 
 
@@ -36,6 +38,13 @@ from utils.formatters import format_welcome
 print(" Inicializando RAG Service en Message Orchestrator...")
 rag_service = RAGService()
 print(" RAG Service listo\n")
+
+# Inicializar Agente de Nutrición (singleton)
+# LLM-agnostic: cambiar AnthropicProvider por otro provider sin tocar el agente
+print(" Inicializando Nutrition Agent...")
+llm_provider = AnthropicProvider()
+nutrition_agent = NutritionAgent(llm_provider=llm_provider, rag_service=rag_service)
+print(" Nutrition Agent listo\n")
 
 
 def handle_message(update: dict):
@@ -193,9 +202,12 @@ def handle_weekly_setup(chat_id: str, text: str) -> str:
 
 def handle_active_conversation(chat_id: str, text: str) -> str:
     """
-    Maneja conversación normal con usuario activo
+    Maneja conversación normal con usuario activo.
 
-    Usa RAG si la pregunta es sobre nutrición
+    Usa el NutritionAgent que decide autónomamente:
+    - Si buscar contexto RAG
+    - Si invocar herramientas (macros, recetas, suplementos, etc.)
+    - Cómo combinar todo en una respuesta coherente
 
     Args:
         chat_id: ID del chat
@@ -204,33 +216,17 @@ def handle_active_conversation(chat_id: str, text: str) -> str:
     Returns:
         Respuesta para el usuario
     """
-    print(" → Handler: Active Conversation")
+    print(" → Handler: Active Conversation (Agent)")
 
-    user = get_user(chat_id)
     profile = get_user_profile(chat_id)
     history = get_conversation_history(chat_id, limit=10)
 
-    # Determinar si usar RAG
-    use_rag = should_use_rag(text)
-
-    rag_context = ""
-    if use_rag:
-        print(" → Usando RAG")
-        # Buscar en knowledge base
-        rag_results = rag_service.search_knowledge(text, k=3)
-        if rag_results:
-            rag_context = "\n\n".join([
-                f"[Info relevante {i}]\n{chunk}"
-                for i, chunk in enumerate(rag_results, 1)
-            ])
-
-    # Obtener respuesta del LLM
-    response = get_response_with_context(
-        estado='active',
+    # El agente decide autónomamente: RAG, tools, o respuesta directa
+    response = nutrition_agent.run(
         user_message=text,
         user_profile=profile,
         history=history,
-        rag_context=rag_context
+        estado='active',
     )
 
     return response
@@ -299,23 +295,3 @@ O simplemente preguntame sobre nutricion deportiva!"""
         return f"Comando desconocido: {command}. Usa /help para ver comandos disponibles."
 
 
-def should_use_rag(text: str) -> bool:
-    """
-    Determina si una pregunta debe usar RAG
-
-    Args:
-        text: Mensaje del usuario
-
-    Returns:
-        True si debe usar RAG
-    """
-    rag_keywords = [
-        'como', 'cuanto', 'que es', 'que son', 'calculo', 'calcular',
-        'formula', 'proteina', 'carbohidrato', 'grasa', 'caloria',
-        'macro', 'nutriente', 'deficit', 'superavit', 'mantenimiento',
-        'suplemento', 'creatina', 'whey', 'omega', 'vitamina',
-        'dieta', 'alimentacion', 'comida', 'menu'
-    ]
-
-    text_lower = text.lower()
-    return any(keyword in text_lower for keyword in rag_keywords)

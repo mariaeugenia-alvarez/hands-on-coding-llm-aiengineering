@@ -24,7 +24,7 @@ KNOWLEDGE_BASE_DIR = "data/knowledge_base"
 VECTORSTORE_DIR = "data/vectorstore_faiss"
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 200
-EMBEDDINGS_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+EMBEDDINGS_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
 
 def load_documents(directory: str) -> list:
