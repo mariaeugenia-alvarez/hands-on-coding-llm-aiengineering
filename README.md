@@ -2,6 +2,8 @@
 
 Bot de Telegram que actúa como nutricionista deportivo usando RAG (Retrieval Augmented Generation). Proporciona asesoramiento nutricional personalizado, calcula macros, genera planes semanales y recomienda suplementos basándose en el perfil del usuario.
 
+ [Ver presentación completa del proyecto](assets/presentacion.pdf)
+
 ## Características
 
 - **Onboarding completo**: Recopila datos del usuario (peso, altura, edad, objetivo, nivel de actividad)
@@ -13,6 +15,12 @@ Bot de Telegram que actúa como nutricionista deportivo usando RAG (Retrieval Au
 - **Guardrails de seguridad**: Proteccion contra prompt injection, restriccion tematica a nutricion deportiva, prevencion de fuga de datos sensibles y disclaimer medico
 
 ## Arquitectura
+
+El sistema integra múltiples componentes para ofrecer asesoramiento nutricional personalizado: desde la recepción de mensajes vía webhook de Telegram, pasando por guardrails de seguridad, hasta la generación de respuestas con RAG y herramientas especializadas.
+
+![Infografía del Sistema](assets/infografia.png)
+
+La infografía muestra el flujo completo del bot, desde que el usuario envía un mensaje hasta que recibe una respuesta personalizada, incluyendo todos los componentes intermedios (guardrails, RAG, tools, base de datos y LLM).
 
 ```
 ┌─────────────────────────────────────────────┐
@@ -86,6 +94,10 @@ HuggingFace  recetas,      history, schedules,
 ├── docker/
 │   ├── Dockerfile                 # Imagen Docker
 │   └── docker-compose.yml         # Orquestacion Docker
+│
+├── assets/
+│   ├── infografia.png             # Infografía visual del proyecto
+│   └── presentacion.pdf           # Presentación completa del proyecto
 │
 ├── config/
 │   ├── settings.py                # Configuración centralizada
